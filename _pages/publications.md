@@ -5,8 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-<!-- You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %} --->
+<!-- You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div> --->
 
 ## Working Papers and Works in Progress
 
