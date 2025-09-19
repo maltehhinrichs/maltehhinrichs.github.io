@@ -23,6 +23,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<div id="cv-download"></div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+const { createApp, ref } = Vue;
+
+createApp({
+  setup() {
+    const isDownloading = ref(false);
+    const downloadCV = () => alert("Download triggered!");
+    return { isDownloading, downloadCV };
+  },
+  template: `
+    <button @click="downloadCV">
+      {{ isDownloading ? 'Loading...' : 'Download CV' }}
+    </button>
+  `
+}).mount('#cv-download');
+</script>
+
+
 ## Education
 
 **PhD in Economics**  
