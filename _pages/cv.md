@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-The most up-to-date version of my CV is available for downlaod here:
+The most up-to-date version of my CV is available for download here:
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="{{ '/assets/js/cv-download.js' | relative_url }}"></script>
