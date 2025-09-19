@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my personal website!
-
 I am a PhD student in Economics at Queen's University Belfast, where I am a member of the Centre for Economics, Policy and History, an all-Ireland centre of excellence funded by the Higher Education Authority North-South Research Programme, linking Trinity College Dublin and Queen's University Belfast.
 
 My research focuses on renewable energy and technological change during the Industrial Revolution. This research aims at contributing to a better understanding of how water mills and steam engines shaped long-run economic development patterns across different regions. For my doctoral research I am supervised by Prof. Alan Fernihough and Dr. Chris Colvin.
