@@ -7,6 +7,8 @@ redirect_from:
   - /resume
 ---
 
+The most up-to-date version of my CV is available for downlaod here:
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="{{ '/assets/js/cv-download.js' | relative_url }}"></script>
 
@@ -17,32 +19,11 @@ redirect_from:
 <div id="cv-download" style="margin-bottom: 2rem;"></div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
     const megaUrl = 'https://mega.nz/file/ARkGlTKT#SvqaXqEUQEEQjxBoeaI1fmUhFg0CeIID4sl91Xh3fXM';
     initCVDownload(megaUrl);
-});
+};
 </script>
-
-<div id="cv-download"></div>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script>
-const { createApp, ref } = Vue;
-
-createApp({
-  setup() {
-    const isDownloading = ref(false);
-    const downloadCV = () => alert("Download triggered!");
-    return { isDownloading, downloadCV };
-  },
-  template: `
-    <button @click="downloadCV">
-      {{ isDownloading ? 'Loading...' : 'Download CV' }}
-    </button>
-  `
-}).mount('#cv-download');
-</script>
-
 
 ## Education
 
