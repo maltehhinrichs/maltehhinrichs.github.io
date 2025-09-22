@@ -5,6 +5,8 @@ permalink: /presentations/
 author_profile: true
 ---
 
+<iframe src="/talkmap/map.html" height="600" width="100%" style="border:none;"></iframe>
+
 - **European Historical Economics Society Conference**  
   University of Hohenheim  
   September 2025
