@@ -1,0 +1,34 @@
+name: Weekly CV Sync from Mega
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Every Monday at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set variables
+        run: |
+          MEGA_URL="https://mega.nz/file/FZUDASZJ#iZbyys55rk5wroHyCt3xHVNJU-__OjZ2_JrnvXHAFdo"
+          BASE64_URL=$(echo -n "$MEGA_URL" | base64 -w 0)
+          echo "BASE64_URL=$BASE64_URL" >> $GITHUB_ENV
+
+      - name: Download CV from Mega
+        run: |
+          curl -L -o cv-latest.md "https://mega.wldbs.workers.dev/download?url=${BASE64_URL}"
+
+      - name: Move and git add
+        run: |
+          mv cv-latest.pdf ./static/files/cv-latest.md
+          git add ./static/files/cv-latest.md
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git diff --cached --quiet || (git commit -m "Update CV from Mega.nz" && git push)
