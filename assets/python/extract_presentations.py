@@ -1,4 +1,5 @@
 import re
+from pathlib import Path
 
 def extract_presentations(md_path):
     with open(md_path, "r", encoding="utf-8") as f:
@@ -7,8 +8,6 @@ def extract_presentations(md_path):
     in_section = False
     presentations = []
 
-    year = None
-    # Matches: **Conference Name**, University Name (Month Year)
     pat_entry = re.compile(r"^\*\*(.+?)\*\*,\s*(.+?)\s*\((.+?)\)")
     pat_year = re.compile(r"^##\s+(\d{4})")
 
@@ -20,10 +19,8 @@ def extract_presentations(md_path):
             break  # End of section
 
         if in_section:
-            year_match = pat_year.match(line.strip())
-            if year_match:
-                year = year_match.group(1)
-                continue
+            if pat_year.match(line.strip()):
+                continue  # skip year headers
 
             entry_match = pat_entry.match(line.strip())
             if entry_match:
@@ -45,7 +42,12 @@ def format_presentations_md(presentations):
     return "\n".join(out)
 
 if __name__ == "__main__":
-    presentations = extract_presentations("cv-latest.md")
-    with open("presentations.md", "w", encoding="utf-8") as f:
+    # Look for cv-latest.md in ./files relative to this script
+    script_dir = Path(__file__).parent
+    cv_path = script_dir.parent / "files" / "cv-latest.md"
+    output_path = script_dir.parent / "files" / "presentations.md"
+
+    presentations = extract_presentations(str(cv_path))
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write("# Academic Presentations\n\n")
         f.write(format_presentations_md(presentations))
