@@ -16,7 +16,7 @@ from geopy import Nominatim
 from geopy.exc import GeocoderTimedOut
 
 # --- Configuration ---
-INPUT_FILE = "presentations.md" # The markdown file with your presentation list
+INPUT_FILE = os.path.join("_pages", "presentations.md")     # The markdown file with your presentation list
 OUTPUT_FOLDER = "talkmap"       # The folder to save map files in
 JS_OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, "org-locations.js")
 GEOCODE_TIMEOUT = 10            # Timeout in seconds for geocoding requests
