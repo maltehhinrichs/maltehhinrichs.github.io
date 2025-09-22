@@ -20,6 +20,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add presentations.md
+          git add _pages/presentations.md || echo "No changes to commit"
           git commit -m "Automated update of presentations list" || echo "No changes to commit"
           git push
