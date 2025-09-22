@@ -24,8 +24,8 @@ jobs:
 
       - name: Move and git add
         run: |
-          mv cv-latest.md ./static/files/cv-latest.md
-          git add ./static/files/cv-latest.md
+          mv cv-latest.md ./files/cv-latest.md
+          git add ./files/cv-latest.md
 
       - name: Commit and push if changed
         run: |
