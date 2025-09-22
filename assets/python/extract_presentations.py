@@ -42,10 +42,11 @@ def format_presentations_md(presentations):
     return "\n".join(out)
 
 if __name__ == "__main__":
-    # Look for cv-latest.md in ./files relative to this script
+    # Go two levels up from this script, then into files/
     script_dir = Path(__file__).parent
-    cv_path = script_dir.parent / "files" / "cv-latest.md"
-    output_path = script_dir.parent / "files" / "presentations.md"
+    repo_root = script_dir.parents[1]
+    cv_path = repo_root / "files" / "cv-latest.md"
+    output_path = repo_root / "files" / "presentations.md"
 
     presentations = extract_presentations(str(cv_path))
     with open(output_path, "w", encoding="utf-8") as f:
