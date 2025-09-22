@@ -49,8 +49,7 @@ if __name__ == "__main__":
     output_path = repo_root / "_pages" / "presentations.md"
 
     # Set front matter
-    front_matter = """
----
+    front_matter = """---
 layout: archive
 title: "Presentations"
 permalink: /presentations/
