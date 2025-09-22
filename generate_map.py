@@ -28,22 +28,28 @@ def parse_presentations(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             post = frontmatter.load(f)
-            lines = [line.lstrip('- ').strip() for line in post.content.strip().split('\n') if line.strip()]
 
-            if len(lines) % 3 != 0:
+            # Split into lines, remove empties, strip only leading "- "
+            raw_lines = [line.lstrip('- ').strip() for line in post.content.strip().split('\n') if line.strip()]
+
+            if len(raw_lines) % 3 != 0:
                 print("   Warning: The number of lines is not a multiple of 3. Parsing may be incorrect.")
 
-            clean = lambda s: re.sub(r"\*\*(.*?)\*\*", r"\1", s)
+            for i in range(0, len(raw_lines), 3):
+                if i + 2 < len(raw_lines):
+                    event = raw_lines[i].strip('*')   # remove markdown bold
+                    venue = raw_lines[i+1]
+                    date = raw_lines[i+2]
 
-            for i in range(0, len(lines), 3):
-                if i + 2 < len(lines):
                     presentations.append({
-                        'event': clean(lines[i]),
-                        'venue': lines[i+1],
-                        'date': lines[i+2]
+                        'event': event,
+                        'venue': venue,
+                        'date': date
                     })
+
         print(f"   Success: Found {len(presentations)} presentations.")
         return presentations
+
     except FileNotFoundError:
         print(f"   Error: {file_path} not found. Please check the file name and location.")
         return None
