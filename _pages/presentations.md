@@ -5,6 +5,7 @@
     permalink: /presentations/
     author_profile: true
     ---
+
     - European Historical Economics Society Conference
   University of Hohenheim
   September 2025
