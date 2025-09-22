@@ -1,22 +1,10 @@
 var addressPoints = [
-  [
-    "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
-    51.4893335,
-    -0.14405508452768728
-  ],
-  [
-    "Tutorial 1 on Relevant Topic in Your Field<br />UC-Berkeley Institute for Testing Science; Berkeley, CA, USA",
-    37.8708393,
-    -122.272863
-  ],
-  [
-    "Conference Proceeding talk 3 on Relevant Topic in Your Field<br />Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA",
-    34.0536909,
-    -118.242766
-  ],
-  [
-    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
-    37.7792588,
-    -122.4193286
-  ]
+  ["European Historical Economics Society Conference<br>University of Hohenheim<br>September 2025", 48.7133801, 9.212073],
+  ["CEPH PhD Workshop in Quantitative Economic History<br>Queen's University Belfast<br>June 2025", 54.5842881, -5.9336562],
+  ["QBS PGR Conference<br>Queen's University Belfast<br>June 2025", 54.5842881, -5.9336562],
+  ["Economic History Society Conference<br>University of Strathclyde<br>April 2025", 55.8618812, -4.2419566],
+  ["QUCEH PhD Discussion Group<br>Queen's University Belfast<br>February 2025", 54.5842881, -5.9336562],
+  ["EHS Residential Training<br>University of Warwick<br>November 2024", 52.3813073, -1.5639569],
+  ["QUCEH Seminar Series<br>Queen's University Belfast<br>April 2024", 54.5842881, -5.9336562],
+  ["QUCEH PhD Discussion Group<br>Queen's University Belfast<br>March 2024", 54.5842881, -5.9336562]
 ];
