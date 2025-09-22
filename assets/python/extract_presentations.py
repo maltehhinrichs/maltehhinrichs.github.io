@@ -60,6 +60,10 @@ permalink: /presentations/
 author_profile: true
 ---
 
+<iframe src="/talkmap/map.html" height="600" width="100%" style="border:none;"></iframe>
+
+## Full List
+
 """
 
     presentations = extract_presentations(str(cv_path))
