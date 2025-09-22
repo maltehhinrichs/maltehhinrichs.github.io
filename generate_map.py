@@ -11,6 +11,7 @@
 
 import os
 import time
+import re
 import frontmatter
 from geopy import Nominatim
 from geopy.exc import GeocoderTimedOut
