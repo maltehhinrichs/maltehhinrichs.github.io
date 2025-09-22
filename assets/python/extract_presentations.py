@@ -38,7 +38,11 @@ def extract_presentations(md_path):
 def format_presentations_md(presentations):
     out = []
     for p in presentations:
-        out.append(f"- **{p['conference']}** \n  {p['university']} \n  {p['date']} \n")
+        out.append(
+            f"- **{p['conference']}**\n"
+            f"  - {p['university']}\n"
+            f"  - {p['date']}\n"
+        )
     return "\n".join(out)
 
 if __name__ == "__main__":
