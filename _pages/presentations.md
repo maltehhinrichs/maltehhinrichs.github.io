@@ -1,10 +1,10 @@
 
-    ---
-    layout: archive
-    title: "Presentations"
-    permalink: /presentations/
-    author_profile: true
-    ---
+---
+layout: archive
+title: "Presentations"
+permalink: /presentations/
+author_profile: true
+---
 
     - European Historical Economics Society Conference
   University of Hohenheim
