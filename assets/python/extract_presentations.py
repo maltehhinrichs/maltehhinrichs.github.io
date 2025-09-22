@@ -50,12 +50,12 @@ if __name__ == "__main__":
 
     # Set front matter
     front_matter = """
-    ---
-    layout: archive
-    title: "Presentations"
-    permalink: /presentations/
-    author_profile: true
-    ---
+---
+layout: archive
+title: "Presentations"
+permalink: /presentations/
+author_profile: true
+---
 
     """
 
