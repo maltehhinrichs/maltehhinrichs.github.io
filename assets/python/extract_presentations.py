@@ -39,9 +39,9 @@ def format_presentations_md(presentations):
     out = []
     for p in presentations:
         out.append(
-            f"- **{p['conference']}**\n"
-            f"  - {p['university']}\n"
-            f"  - {p['date']}\n"
+            f"- **{p['conference']}**  \n"
+            f"  {p['university']}  \n"
+            f"  {p['date']}\n"
         )
     return "\n".join(out)
 
