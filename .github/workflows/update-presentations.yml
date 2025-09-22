@@ -1,25 +1,33 @@
-name: Update Academic Presentations
+name: Weekly Presentations Extraction
 
 on:
   schedule:
     - cron: '0 6 * * 1' # Every Monday at 06:00 UTC
-  workflow_dispatch:      # Allows manual trigger
+  workflow_dispatch:
 
 jobs:
-  extract-presentations:
+  update-presentations:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Run extraction script
+
+      - name: Extract presentations
         run: python assets/python/extract_presentations.py
-      - name: Commit and push changes
+
+      - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add _pages/presentations.md || echo "No changes to commit"
-          git commit -m "Automated update of presentations list" || echo "No changes to commit"
-          git push
+          git diff-index --quiet HEAD || git commit -m "Automated update of presentations list"
+          git push https://$CV_ACCESS_TOKEN@github.com/maltehhinrichs/maltehhinrichs.github.io.git HEAD:${GITHUB_REF_NAME}
+        env:
+          CV_ACCESS_TOKEN: ${{ secrets.CV_ACCESS_TOKEN }}
