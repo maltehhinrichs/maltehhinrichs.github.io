@@ -1,0 +1,54 @@
+name: Generate Presentation Map
+
+on:
+  # Run this workflow automatically when presentations.md is changed
+  push:
+    paths:
+      - 'presentations.md'
+      
+  # Allow you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-map:
+    runs-on: ubuntu-latest
+    permissions:
+      # Give the workflow permission to write to the repository
+      contents: write
+      
+    steps:
+      # Step 1: Check out your repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up the Python environment
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip' # Cache pip dependencies to speed up future runs
+
+      # Step 3: Install the required Python libraries
+      - name: Install Dependencies
+        run: pip install geopy python-frontmatter
+
+      # Step 4: Run the map generation script
+      - name: Run Map Generation Script
+        run: python generate_map.py
+
+      # Step 5: Commit and push the updated map file if it has changed
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Add the generated file to the staging area
+          git add talkmap/org-locations.js
+          
+          # Commit only if there are changes
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Automated: Update presentation map data"
+            git push
+          else
+            echo "No changes to the map data. Nothing to commit."
+          fi
