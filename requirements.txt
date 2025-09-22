@@ -1,0 +1,2 @@
+geopy
+python-frontmatter
