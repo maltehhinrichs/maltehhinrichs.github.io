@@ -56,6 +56,7 @@ if __name__ == "__main__":
     permalink: /presentations/
     author_profile: true
     ---
+
     """
 
     presentations = extract_presentations(str(cv_path))
