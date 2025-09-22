@@ -22,6 +22,8 @@ OUTPUT_FOLDER = "talkmap"       # The folder to save map files in
 JS_OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, "org-locations.js")
 GEOCODE_TIMEOUT = 10            # Timeout in seconds for geocoding requests
 
+import re
+
 def parse_presentations(file_path):
     print("-> Parsing presentations.md...")
     presentations = []
@@ -29,25 +31,32 @@ def parse_presentations(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             post = frontmatter.load(f)
 
-            # Split into lines, remove empties, strip only leading "- "
-            raw_lines = [line.lstrip('- ').strip() for line in post.content.strip().split('\n') if line.strip()]
+            raw_lines = [line.rstrip() for line in post.content.splitlines() if line.strip()]
 
-            if len(raw_lines) % 3 != 0:
-                print("   Warning: The number of lines is not a multiple of 3. Parsing may be incorrect.")
+            i = 0
+            while i < len(raw_lines):
+                line = raw_lines[i]
 
-            for i in range(0, len(raw_lines), 3):
-                if i + 2 < len(raw_lines):
-                    event = raw_lines[i].strip('*')   # remove markdown bold
-                    venue = raw_lines[i+1]
-                    date = raw_lines[i+2]
-
-                    presentations.append({
-                        'event': event,
-                        'venue': venue,
-                        'date': date
-                    })
+                # Look for a new entry starting with "- **"
+                if line.startswith("- **"):
+                    event = re.sub(r"\*\*(.*?)\*\*", r"\1", line.lstrip("- ").strip())
+                    if i+2 < len(raw_lines):
+                        venue = raw_lines[i+1].strip()
+                        date = raw_lines[i+2].strip()
+                        presentations.append({
+                            "event": event,
+                            "venue": venue,
+                            "date": date
+                        })
+                        i += 3
+                        continue
+                i += 1
 
         print(f"   Success: Found {len(presentations)} presentations.")
+        print("   Preview of parsed entries:")
+        for p in presentations:
+            print(f"     {p['event']} @ {p['venue']} ({p['date']})")
+
         return presentations
 
     except FileNotFoundError:
