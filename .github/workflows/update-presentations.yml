@@ -2,7 +2,7 @@ name: Update Academic Presentations
 
 on:
   schedule:
-    - cron: '0 0 * * MON'  # Every Monday at midnight UTC
+    - cron: '0 6 * * 1' # Every Monday at 06:00 UTC
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.x'
       - name: Run extraction script
-        run: python scripts/extract_presentations.py
+        run: python assets/python/extract_presentations.py
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
