@@ -48,7 +48,15 @@ if __name__ == "__main__":
     cv_path = repo_root / "files" / "cv-latest.md"
     output_path = repo_root / "_pages" / "presentations.md"
 
+    # Set front matter
+    front_matter = """---
+    title: "Academic Presentations"
+    permalink: /presentations/
+    layout: page
+    ---
+    """
+
     presentations = extract_presentations(str(cv_path))
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write("# Academic Presentations\n\n")
+        f.write(front_matter)
         f.write(format_presentations_md(presentations))
