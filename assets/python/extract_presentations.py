@@ -57,7 +57,7 @@ permalink: /presentations/
 author_profile: true
 ---
 
-    """
+"""
 
     presentations = extract_presentations(str(cv_path))
     with open(output_path, "w", encoding="utf-8") as f:
