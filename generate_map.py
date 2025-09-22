@@ -22,29 +22,22 @@ JS_OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, "org-locations.js")
 GEOCODE_TIMEOUT = 10            # Timeout in seconds for geocoding requests
 
 def parse_presentations(file_path):
-    """
-    Parses the presentations.md file, assuming a format of three lines per entry:
-    - Event Title
-    - Location / Venue
-    - Date
-    """
     print("-> Parsing presentations.md...")
     presentations = []
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
-            # Use python-frontmatter to safely load the file and skip the YAML header
             post = frontmatter.load(f)
-            # Clean up lines and remove any empty ones
-            lines = [line.strip('- ').strip() for line in post.content.strip().split('\n') if line.strip()]
-            
+            lines = [line.lstrip('- ').strip() for line in post.content.strip().split('\n') if line.strip()]
+
             if len(lines) % 3 != 0:
                 print("   Warning: The number of lines is not a multiple of 3. Parsing may be incorrect.")
 
-            # Group the cleaned lines into chunks of 3
+            clean = lambda s: re.sub(r"\*\*(.*?)\*\*", r"\1", s)
+
             for i in range(0, len(lines), 3):
                 if i + 2 < len(lines):
                     presentations.append({
-                        'event': lines[i],
+                        'event': clean(lines[i]),
                         'venue': lines[i+1],
                         'date': lines[i+2]
                     })
