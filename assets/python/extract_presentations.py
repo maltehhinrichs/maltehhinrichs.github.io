@@ -62,6 +62,8 @@ author_profile: true
 
 ## Map
 
+Below is a map of conferences and workshops where I have presented my research:
+
 <iframe src="/talkmap/map.html" height="600" width="100%" style="border:none;"></iframe>
 
 ## Full List
