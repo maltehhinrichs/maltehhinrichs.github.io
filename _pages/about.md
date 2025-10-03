@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in Economics at [Queen's University Belfast](https://www.qub.ac.uk/), where I am a member of the [Centre for Economics, Policy and History](https://ceph.ie/), an all-Ireland centre of excellence funded by the [Higher Education Authority North-South Research Programme](https://hea.ie/policy/research-policy/north-south-research-programme/), linking [Trinity College Dublin](https://www.tcd.ie/) and Queen's University Belfast.
+I am a PhD student in Economics at [Queen's University Belfast](https://www.qub.ac.uk/), where I am a member of the [Centre for Economics, Policy and History](https://ceph.ie/), an all-Ireland centre of excellence funded by the Higher Education Authority North-South Research Programme, linking [Trinity College Dublin](https://www.tcd.ie/economics/) and [Queen's University Belfast](https://www.qub.ac.uk/schools/queens-business-school/).
 
 My research focuses on water power and technological change during the Industrial Revolution. This research aims at contributing to a better understanding of the dynamics of the Industrial Revolution and the reasons behind and paths to long-run economic growth. For my doctoral research I am supervised by [Dr. Alan Fernihough](https://pure.qub.ac.uk/en/persons/alan-fernihough) and [Dr. Chris Colvin](https://www.chriscolvin.nl/).
 
