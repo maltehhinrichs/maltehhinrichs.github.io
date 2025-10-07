@@ -34,7 +34,7 @@ jobs:
 
       # Step 4: Run the map generation script
       - name: Run Map Generation Script
-        run: python generate_map.py
+        run: python assets/python/generate_map.py
 
       # Step 5: Commit and push the updated map file if it has changed
       - name: Commit and Push Changes
