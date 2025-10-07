@@ -11,11 +11,11 @@ main:
   - title: "Research Interests"
     url: /research-interests/
 
-  - title: "Publications"
-    url: /publications/
+  - title: "Research"
+    url: /research/
 
   - title: "Presentations"
-    url: "/presentations/"  
+    url: /presentations/
 
   - title: "Teaching"
     url: /teaching/
