@@ -127,10 +127,6 @@ def main():
 
     print("\n---")
     print("✅ All done!")
-    print("\nNext steps:")
-    print("1. Ensure you have a 'map.html' file inside the 'talkmap' folder.")
-    print(f"2. Add the following code to '{INPUT_FILE}' where you want the map:")
-    print('\n<iframe src="/talkmap/map.html" height="600" width="100%" style="border:none;"></iframe>\n')
 
 if __name__ == "__main__":
     main()
