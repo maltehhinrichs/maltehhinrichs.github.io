@@ -22,6 +22,7 @@ jobs:
           RCLONE_CONFIG_MEGA_TYPE: mega
           RCLONE_CONFIG_MEGA_USER: ${{ secrets.MEGA_USER }}
           RCLONE_CONFIG_MEGA_PASS: ${{ secrets.MEGA_PASS }}
+          RCLONE_CONFIG_MEGA_MFA_KEY: ${{ secrets.MEGA_TOTP_KEY }}
 
       - name: Commit and push updated CV
         run: |
