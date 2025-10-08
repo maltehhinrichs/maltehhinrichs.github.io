@@ -25,14 +25,14 @@ My research focuses on the intersection of economic history, technological chang
 
 <!-- You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div> --->
 
-- **"Water mills and human capital accumulation in industrialising Prussia"**
+- **"Water mills and human capital accumulation in industrialising Prussia"**  
   *Revise and Resubmit at Explorations in Economic History*
   <details>
   <summary>Abstract</summary>
   Did Germany's industrial rise begin with its water mills? This study examines how water mills shaped early industrial development in Prussia using historical county-level census data. I show that water-powered proto-industrialization fostered skilled artisanal human capital by the mid-nineteenth century. Unlike wind or animal-powered mills, water mills supported diverse industries, driving technological spillovers and early industrialization. Counties with more water mills saw faster population growth, though this effect declined with the adoption of coal and steam. These findings underscore water power's role in Germany's industrial rise, and suggest that water-driven industrialization was a broader European phenomenon, not unique to Britain.
   </details>
 
-- **"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"**
+- **"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"**  
   *Work in progress*
   <details>
   <summary>Abstract</summary>
