@@ -16,13 +16,10 @@ jobs:
 
       - name: Download CV directly from Mega using rclone
         run: |
-          echo "Syncing CV from Mega account..."
+          echo "Using preconfigured rclone.conf"
+          mkdir -p ~/.config/rclone
+          echo "${{ secrets.RCLONE_CONFIG_FILE }}" > ~/.config/rclone/rclone.conf
           rclone copy "mega:Privat/Lebenslauf/Academic_CV.qmd" cv-latest.md
-        env:
-          RCLONE_CONFIG_MEGA_TYPE: mega
-          RCLONE_CONFIG_MEGA_USER: ${{ secrets.MEGA_USER }}
-          RCLONE_CONFIG_MEGA_PASS: ${{ secrets.MEGA_PASS }}
-          RCLONE_CONFIG_MEGA_MFA_KEY: ${{ secrets.MEGA_TOTP_KEY }}
 
       - name: Commit and push updated CV
         run: |
