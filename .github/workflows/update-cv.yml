@@ -12,8 +12,7 @@ jobs:
 
       - name: Install rclone
         run: |
-          sudo apt-get update
-          sudo apt-get install -y rclone
+          curl https://rclone.org/install.sh | sudo bash
 
       - name: Download CV directly from Mega using rclone
         run: |
