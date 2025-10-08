@@ -8,33 +8,41 @@ on:
 jobs:
   update-cv:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Allows the GITHUB_TOKEN to push to the repository
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false
 
-      - name: Set variables
+      - name: Download CV directly from Mega using rclone
         run: |
-          MEGA_URL="https://mega.nz/file/FZUDASZJ#iZbyys55rk5wroHyCt3xHVNJU-__OjZ2_JrnvXHAFdo"
-          BASE64_URL=$(echo -n "$MEGA_URL" | base64 -w 0)
-          echo "BASE64_URL=$BASE64_URL" >> $GITHUB_ENV
+          echo "Syncing CV from Mega account with 2FA..."
+          rclone copy \
+            --mega-user "${{ secrets.MEGA_USER }}" \
+            --mega-pass "${{ env.RCLONE_CONFIG_PASS_PASS }}" \
+            --mega-2fa-key "${{ secrets.MEGA_TOTP_KEY }}" \
+            mega:"Privat/Lebenslauf/Academic_CV.qmd" . # <-- IMPORTANT: Change this to your file's path in Mega
+        env:
+          RCLONE_CONFIG_PASS_PASS: ${{ secrets.MEGA_PASS }}
 
-      - name: Download CV from Mega
+      - name: Overwrite existing CV
         run: |
-          curl -L -o cv-latest.md "https://mega.wldbs.workers.dev/download?url=${BASE64_URL}"
-
-      - name: Move and git add
-        run: |
+          mkdir -p ./files
           mv cv-latest.md ./files/cv-latest.md
-          git add ./files/cv-latest.md
 
-      - name: Commit and push if changed
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git diff-index --quiet HEAD || git commit -m "Update CV from Mega.nz"
-          git push https://$CV_ACCESS_TOKEN@github.com/maltehhinrichs/maltehhinrichs.github.io.git HEAD:${GITHUB_REF_NAME}
-        env:
-          CV_ACCESS_TOKEN: ${{ secrets.CV_ACCESS_TOKEN }}
+          git add ./files/cv-latest.md
+          
+          if git diff-index --quiet HEAD; then
+            echo "No changes detected. CV is already up-to-date."
+          else
+            echo "CV has been updated. Committing and pushing..."
+            git commit -m "Update CV from Mega.nz"
+            # V-- THE PUSH COMMAND IS NOW MUCH SIMPLER --V
+            git push
+          fi
