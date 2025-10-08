@@ -1,52 +1,34 @@
-name: Weekly CV Sync from Mega
+name: Update CV from Mega
 
 on:
-  schedule:
-    - cron: '0 6 * * 1' # Every Monday at 06:00 UTC
   workflow_dispatch:
 
 jobs:
   update-cv:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # Allows the GITHUB_TOKEN to push to the repository
-
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install rclone manually
+      - name: Install rclone
         run: |
           sudo apt-get update
           sudo apt-get install -y rclone
 
       - name: Download CV directly from Mega using rclone
         run: |
-          echo "Syncing CV from Mega account with 2FA..."
-          rclone copy \
-            --mega-user "${{ secrets.MEGA_USER }}" \
-            --mega-pass "${{ env.RCLONE_CONFIG_PASS_PASS }}" \
-            --mega-2fa-key "${{ secrets.MEGA_TOTP_KEY }}" \
-            "mega:Privat/Lebenslauf/Academic_CV.qmd" cv-latest.md
+          echo "Syncing CV from Mega account..."
+          rclone copy "mega:Privat/Lebenslauf/Academic_CV.qmd" cv-latest.md
         env:
-          # This specific env var name is required for rclone to securely read the password
-          RCLONE_CONFIG_PASS_PASS: ${{ secrets.MEGA_PASS }}
+          RCLONE_CONFIG_MEGA_TYPE: mega
+          RCLONE_CONFIG_MEGA_USER: ${{ secrets.MEGA_USER }}
+          RCLONE_CONFIG_MEGA_PASS: ${{ secrets.MEGA_PASS }}
 
-      - name: Overwrite existing CV
+      - name: Commit and push updated CV
         run: |
-          mkdir -p ./files
-          mv cv-latest.md ./files/cv-latest.md
-
-      - name: Commit and push changes if CV updated
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add ./files/cv-latest.md
-          
-          if git diff --cached --quiet; then
-            echo "No changes detected. CV is already up-to-date."
-          else
-            echo "CV has been updated. Committing and pushing..."
-            git commit -m "Update CV from Mega.nz"
-            git push
-          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mv cv-latest.md content/cv.md
+          git add content/cv.md
+          git commit -m "Updated CV from Mega" || echo "No changes to commit"
+          git push
