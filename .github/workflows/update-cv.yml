@@ -8,7 +8,6 @@ on:
 jobs:
   update-cv:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write # Allows the GITHUB_TOKEN to push to the repository
 
@@ -16,20 +15,27 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Install rclone
+        uses: rclone/action-setup-rclone@v1
+
       - name: Download CV directly from Mega using rclone
         run: |
           echo "Syncing CV from Mega account with 2FA..."
+          # Note: The secret names here must exactly match what you created in GitHub Settings
           rclone copy \
             --mega-user "${{ secrets.MEGA_USER }}" \
             --mega-pass "${{ env.RCLONE_CONFIG_PASS_PASS }}" \
             --mega-2fa-key "${{ secrets.MEGA_TOTP_KEY }}" \
-            mega:"Privat/Lebenslauf/Academic_CV.qmd" . # <-- IMPORTANT: Change this to your file's path in Mega
+            "mega:Privat/Lebenslauf/Academic_CV.qmd" cv-latest.md
         env:
+          # This specific env var name is required for rclone to securely read the password
           RCLONE_CONFIG_PASS_PASS: ${{ secrets.MEGA_PASS }}
 
       - name: Overwrite existing CV
         run: |
+          # Use -p to ensure the directory is created if it doesn't exist
           mkdir -p ./files
+          # Rename the downloaded file to its final name
           mv cv-latest.md ./files/cv-latest.md
 
       - name: Commit and push changes
@@ -43,6 +49,5 @@ jobs:
           else
             echo "CV has been updated. Committing and pushing..."
             git commit -m "Update CV from Mega.nz"
-            # V-- THE PUSH COMMAND IS NOW MUCH SIMPLER --V
             git push
           fi
