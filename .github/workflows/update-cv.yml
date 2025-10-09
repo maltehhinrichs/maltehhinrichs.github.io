@@ -10,39 +10,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Download and Extract MEGAcmd Binary
+      - name: Install MEGAcmd
         run: |
-          wget https://mega.nz/linux/repo/xUbuntu_24.04/amd64/megacmd_2.1.1-1.1_amd64.deb -O megacmd.deb
-          mkdir megacmd-extracted
-          dpkg -x megacmd.deb ./megacmd-extracted
+          sudo apt-get update
+          sudo apt-get install -y megacmd
 
-      - name: Authenticate and Download CV
+      - name: Download CV from MEGA
         run: |
-          set -e
-          MEGACMD_PATH="./megacmd-extracted/usr/bin"
-          mkdir -p ~/.megaCmd
-
-          echo "${{ secrets.MEGA_SESSION_KEY }}" > ~/.megaCmd/session
-
-          echo "Starting MEGAcmd server..."
-          nohup $MEGACMD_PATH/mega-cmd-server > ~/.megaCmd/server.log 2>&1 &
-
-          echo "Waiting for MEGAcmd server to initialize..."
-          sleep 8
-
-          echo "Checking MEGA connection..."
-          $MEGACMD_PATH/mega-cmd ls "mega:/Privat/Lebenslauf" || { echo "❌ Could not list remote directory"; cat ~/.megaCmd/server.log; exit 1; }
-
-          echo "Downloading Academic_CV.qmd..."
-          $MEGACMD_PATH/mega-cmd get "mega:/Privat/Lebenslauf/Academic_CV.qmd" . || { echo "❌ Download failed"; cat ~/.megaCmd/server.log; exit 1; }
-
-          if [ ! -f "Academic_CV.qmd" ]; then
-            echo "❌ File Academic_CV.qmd not found after download."
-            cat ~/.megaCmd/server.log
-            exit 1
-          fi
-
-          echo "✅ CV downloaded successfully."
+          mega-login --session "${{ secrets.MEGA_SESSION_KEY }}"
+          mega-get "mega:/Privat/Lebenslauf/Academic_CV.qmd" .
 
       - name: Commit and push updated CV
         run: |
