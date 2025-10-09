@@ -27,6 +27,7 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip' # This will now work correctly
+          cache-dependency-path: assets/python/python-requirements.txt
 
       # Step 3: Install the required Python libraries from requirements.txt
       - name: Install Dependencies
