@@ -34,5 +34,3 @@ jobs:
           git add _pages/presentations.md || echo "No changes to commit"
           git diff-index --quiet HEAD || git commit -m "Automated update of presentations list"
           git push https://$CV_ACCESS_TOKEN@github.com/maltehhinrichs/maltehhinrichs.github.io.git HEAD:${GITHUB_REF_NAME}
-        env:
-          CV_ACCESS_TOKEN: ${{ secrets.CV_ACCESS_TOKEN }}
