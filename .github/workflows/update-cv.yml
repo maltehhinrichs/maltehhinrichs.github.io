@@ -6,9 +6,8 @@ on:
 jobs:
   update-cv:
     runs-on: ubuntu-latest
-    
-    # ⬇️ ADD THIS PERMISSIONS BLOCK ⬇️
-    # This is crucial. It gives the workflow permission to push code to your repository.
+
+    # Necessary permission!
     permissions:
       contents: write
 
