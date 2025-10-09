@@ -8,7 +8,7 @@ def extract_presentations(md_path):
     in_section = False
     presentations = []
 
-    pat_entry = re.compile(r"^\*\*(.+?)\*\*,\s*(.+?)\s*\((.+?)\)")
+    pat_entry = re.compile(r"^\*\*(.+?)\*\*,\s*(.+?)\s*\\hfill\s*(.+)")
     pat_year = re.compile(r"^##\s+(\d{4})")
 
     for line in lines:
