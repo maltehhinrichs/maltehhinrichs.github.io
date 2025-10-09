@@ -18,12 +18,31 @@ jobs:
 
       - name: Authenticate and Download CV
         run: |
+          set -e
           MEGACMD_PATH="./megacmd-extracted/usr/bin"
           mkdir -p ~/.megaCmd
+
           echo "${{ secrets.MEGA_SESSION_KEY }}" > ~/.megaCmd/session
+
+          echo "Starting MEGAcmd server..."
+          nohup $MEGACMD_PATH/mega-cmd-server > ~/.megaCmd/server.log 2>&1 &
+
           echo "Waiting for MEGAcmd server to initialize..."
-          sleep 5
-          $MEGACMD_PATH/mega-cmd get "mega:/Privat/Lebenslauf/Academic_CV.qmd" .
+          sleep 8
+
+          echo "Checking MEGA connection..."
+          $MEGACMD_PATH/mega-cmd ls "mega:/Privat/Lebenslauf" || { echo "❌ Could not list remote directory"; cat ~/.megaCmd/server.log; exit 1; }
+
+          echo "Downloading Academic_CV.qmd..."
+          $MEGACMD_PATH/mega-cmd get "mega:/Privat/Lebenslauf/Academic_CV.qmd" . || { echo "❌ Download failed"; cat ~/.megaCmd/server.log; exit 1; }
+
+          if [ ! -f "Academic_CV.qmd" ]; then
+            echo "❌ File Academic_CV.qmd not found after download."
+            cat ~/.megaCmd/server.log
+            exit 1
+          fi
+
+          echo "✅ CV downloaded successfully."
 
       - name: Commit and push updated CV
         run: |
