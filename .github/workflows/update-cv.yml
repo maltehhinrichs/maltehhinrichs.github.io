@@ -13,6 +13,10 @@ jobs:
       - name: Install MEGAcmd
         run: |
           sudo apt-get update
+          sudo apt-get install -y wget apt-transport-https gnupg
+          wget -qO - https://mega.nz/linux/repo/MEGAsync/xUbuntu_24.04/Release.key | sudo gpg --dearmor -o /usr/share/keyrings/mega-archive-keyring.gpg
+          echo "deb [signed-by=/usr/share/keyrings/mega-archive-keyring.gpg] https://mega.nz/linux/repo/MEGAsync/xUbuntu_24.04/ ./" | sudo tee /etc/apt/sources.list.d/megacmd.list
+          sudo apt-get update
           sudo apt-get install -y megacmd
 
       - name: Download CV from MEGA
