@@ -11,8 +11,8 @@ fontsize: 11pt
 geometry: 
   - top=2cm
   - bottom=2cm
-  - left=2cm
-  - right=2cm
+  - left=1.75cm
+  - right=1.75cm
 linestretch: 1.08
 header-includes:
   - \usepackage{titling}
@@ -33,65 +33,65 @@ header-includes:
   - \urlstyle{same}
   - \setlength{\parskip}{0.3em}
   - \setlength{\parindent}{0pt}
-  - \renewenvironment{quote}{\list{}{\leftmargin=1em \rightmargin=4.5cm}\item\relax}{\endlist}
+  - \newlength{\cvhangindent}
+  - \setlength{\cvhangindent}{1em}
+  - \makeatletter
+  - \let\@oldnewline\\
+  - \def\\{\@oldnewline\hangindent=\cvhangindent\relax}
+  - \makeatother
 keep-tex: true
 ---
 
 # Education
 
-**PhD in Economics** \hfill October 2023--present
+**PhD in Economics** \hfill 10/2023--present  
+Queen's University Belfast, UK  
+Dissertation title: *Renewable Energy in the Industrial Revolution*  
+Supervisors: Alan Fernihough and Christopher Colvin
 
-> Queen's University Belfast, UK  
-> Dissertation title: *Renewable Energy in the Industrial Revolution*  
-> Supervisors: Alan Fernihough and Christopher Colvin
+**MSc Economics** \hfill 09/2020--08/2022  
+University of Mannheim, Germany  
+Grade: 1.6 (1.0=excellent, 4.0=pass)  
+Thesis: *Engines of Growth? The Role of the Steam Engine for Long-Run*  
+*Economic Development in Germany*
 
-**MSc Economics** \hfill September 2020--August 2022
+**Visiting Student** \hfill 02/2021--06/2021  
+NHH Norwegian School of Economics, Norway
 
-> University of Mannheim, Germany  
-> Grade: 1.6 (1.0=excellent, 4.0=pass)  
-> Thesis: *Engines of Growth? The Role of the Steam Engine for Long-Run Economic Development in Germany*
+**BSc Economics** \hfill 09/2017--08/2020  
+University of Mannheim, Germany  
+Grade: 1.3 (1.0=excellent, 4.0=pass)  
+Thesis: *The Long-Term Effects of Colonialism on Income Inequality*
 
-**Visiting Student** \hfill February--June 2021
-
-> NHH Norwegian School of Economics, Norway
-
-**BSc Economics** \hfill September 2017--August 2020
-
-> University of Mannheim, Germany  
-> Grade: 1.3 (1.0=excellent, 4.0=pass)  
-> Thesis: *The Long-Term Effects of Colonialism on Income Inequality*
-
-**Visiting Student** \hfill August--December 2019
-
-> Hong Kong University of Science and Technology, Hong Kong
+**Visiting Student** \hfill 08/2019--12/2019  
+Hong Kong University of Science and Technology, Hong Kong
 
 ---
 
 # Academic Affiliations
 
-Research Student, Centre for Economics, Policy and History \hfill October 2023--present
+Research Student, Centre for Economics, Policy and History \hfill 10/2023--present
 
 ---
 
 # Working Papers and Works in Progress
 
-"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution" TEST
+"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
+*Work in progress*
 
-"Water mills and human capital accumulation in industrialising Prussia"
+"Water mills and human capital accumulation in industrialising Prussia"  
+*Revise and Resubmit at Explorations in Economic History*
 
 ---
 
 # Teaching Experience
 
-## University of Mannheim
+**University of Mannheim**  
+Principles of Economics, Teaching Assistant \hfill 09/2018--12/2018  
+Macroeconomics A, Teaching Assistant \hfill 02/2020--08/2020
 
-Principles of Economics, Undergraduate Teaching Assistant \hfill September--December 2018
-
-Macroeconomics A, Graduate Teaching Assistant \hfill February--August 2020
-
-## Queen's University Belfast
-
-ECO1013 -- Principles of Economics, Graduate Teaching Assistant \hfill September 2024--present
+**Queen's University Belfast**  
+ECO1013 -- Principles of Economics, Teaching Assistant \hfill 09/2024--present
 
 ---
 
@@ -107,13 +107,13 @@ ECO1013 -- Principles of Economics, Graduate Teaching Assistant \hfill September
 
 # Research Grants and Funding
 
-**EHES Conference Travel and Accommodation Grant** \hfill July 2025
+**EHES Conference Travel and Accommodation Grant** \hfill 07/2025
 
-**EHS Young Scholar Conference Bursary** \hfill January 2025
+**EHS Young Scholar Conference Bursary** \hfill 01/2025
 
-**CEPH Studentship**, Irish Higher Education Authority North-South Research Programme, full funding for PhD studies \hfill October 2023
+**CEPH Studentship**, Irish Higher Education Authority, full funding for PhD studies \hfill 10/2023
 
-**PROMOS Scholarship**, German Academic Exchange Service (DAAD), full funding for semester at HKUST \hfill June 2019
+**PROMOS Scholarship**, German Academic Exchange Service, full funding for HKUST \hfill 06/2019
 
 ---
 
@@ -131,40 +131,40 @@ Irish Economic Association
 
 ## 2025
 
-**European Historical Economics Society Conference**, University of Hohenheim \hfill September 2025
+**European Historical Economics Society Conference**, University of Hohenheim \hfill 09/2025
 
-**CEPH PhD Workshop in Quantitative Economic History**, Queen's University Belfast \hfill June 2025
+**CEPH Workshop in Quantitative Economic History**, Queen's University Belfast \hfill 06/2025
 
-**QBS PGR Conference**, Queen's University Belfast \hfill June 2025
+**QBS PGR Conference**, Queen's University Belfast \hfill 06/2025
 
-**Economic History Society Conference**, University of Strathclyde \hfill April 2025
+**Economic History Society Conference**, University of Strathclyde \hfill 04/2025
 
-**QUCEH PhD Discussion Group**, Queen's University Belfast \hfill February 2025
+**QUCEH PhD Discussion Group**, Queen's University Belfast \hfill 02/2025
 
 ## 2024
 
-**EHS Residential Training**, University of Warwick \hfill November 2024
+**EHS Residential Training**, University of Warwick \hfill 11/2024
 
-**Financial, Economic and Business History Summer School**, University of Groningen \hfill June 2024
+**Financial, Economic and Business History Summer School**, University of Groningen \hfill 06/2024
 
-**QUCEH Seminar Series**, Queen's University Belfast \hfill April 2024
+**QUCEH Seminar Series**, Queen's University Belfast \hfill 04/2024
 
-**QUCEH PhD Discussion Group**, Queen's University Belfast \hfill March 2024
+**QUCEH PhD Discussion Group**, Queen's University Belfast \hfill 03/2024
 
 ---
 
 # Professional Development
 
-**Participant**, Graduate Teaching Assistant Workshops, The Economics Network \hfill January 2025
+**Participant**, Graduate Teaching Assistant Workshops, The Economics Network \hfill 01/2025
 
-**Participant**, Weekend Workshop for Teaching Assistants, University of Mannheim \hfill September 2018
+**Participant**, Weekend Workshop for Teaching Assistants, University of Mannheim \hfill 09/2018
 
 ---
 
 # Industry Experience
 
 **KPMG AG Wirtschaftsprüfungsgesellschaft**  
-Junior Consultant, Global Transfer Pricing \hfill April--September 2023
+Junior Consultant, Global Transfer Pricing \hfill 04/2023--09/2023
 
 ---
 
@@ -186,6 +186,7 @@ Junior Consultant, Global Transfer Pricing \hfill April--September 2023
 
 **Alexander Donges**, University of Mannheim  
 *Fields: Economic history, innovation, competition*
+
 
 
 ```{r}
