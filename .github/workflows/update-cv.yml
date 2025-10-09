@@ -6,6 +6,12 @@ on:
 jobs:
   update-cv:
     runs-on: ubuntu-latest
+    
+    # ⬇️ ADD THIS PERMISSIONS BLOCK ⬇️
+    # This is crucial. It gives the workflow permission to push code to your repository.
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -15,7 +21,6 @@ jobs:
           set -e
           sudo apt-get update
           sudo apt-get install -y curl gnupg apt-transport-https lsb-release
-          # Get the Ubuntu version number (e.g., 22.04) to make the script robust
           VERSION_ID=$(lsb_release -rs)
           curl -fsSL "https://mega.nz/linux/repo/xUbuntu_${VERSION_ID}/Release.key" | \
             sudo gpg --dearmor -o /usr/share/keyrings/mega-archive-keyring.gpg
@@ -26,18 +31,20 @@ jobs:
 
       - name: Download CV files from MEGA
         run: |
-          mega-get "${{ secrets.MEGA_FOLDER }}/Academic_CV.qmd" "Academic_CV.qmd"
-          mega-get "${{ secrets.MEGA_FOLDER }}/Academic_CV.pdf" "Academic_CV.pdf"
+          # This reliably downloads the folder into a new subdirectory
+          mega-get "${{ secrets.MEGA_FOLDER }}" .
 
       - name: Commit and push updated CV
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Rename both files to their new names
-          mv "Academic_CV.qmd" "cv-latest.md"
-          mv "Academic_CV.pdf" "cv-latest.pdf"
-          # Add both files to the staging area
-          git add cv-latest.md cv-latest.pdf
-          # Commit the changes, or echo a message if there are no changes
+          
+          # Find the downloaded files and move/rename them INTO the 'files' directory.
+          find . -name "Academic_CV.qmd" -exec mv {} files/cv-latest.md \;
+          find . -name "Academic_CV.pdf" -exec mv {} files/cv-latest.pdf \;
+          
+          # Add the files from their new location.
+          git add files/cv-latest.md files/cv-latest.pdf
+          
           git commit -m "Updated CV from Mega" || echo "No changes to commit"
           git push
