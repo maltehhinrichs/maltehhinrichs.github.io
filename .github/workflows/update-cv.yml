@@ -10,22 +10,24 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install rclone
+      - name: Download and Extract MEGAcmd Binary
         run: |
-          curl https://rclone.org/install.sh | sudo bash
+          wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megacmd_1.6.2-1.1_amd64.deb -O megacmd.deb
+          mkdir megacmd-extracted
+          dpkg -x megacmd.deb ./megacmd-extracted
 
-      - name: Download CV directly from Mega using rclone
+      - name: Authenticate and Download CV
         run: |
-          echo "Using preconfigured rclone.conf"
-          mkdir -p ~/.config/rclone
-          echo "${{ secrets.RCLONE_CONFIG_FILE }}" > ~/.config/rclone/rclone.conf
-          rclone copy "mega:Privat/Lebenslauf/Academic_CV.qmd" cv-latest.md
-
+          MEGACMD_PATH="./megacmd-extracted/usr/bin"
+          mkdir -p ~/.megaCmd
+          echo "${{ secrets.MEGA_SESSION_KEY }}" > ~/.megaCmd/session
+          $MEGACMD_PATH/mega-get "mega:/Privat/Lebenslauf/Academic_CV.qmd" .
+        
       - name: Commit and push updated CV
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mv cv-latest.md content/cv.md
+          mv "Academic_CV.qmd" content/cv.md
           git add content/cv.md
           git commit -m "Updated CV from Mega" || echo "No changes to commit"
           git push
