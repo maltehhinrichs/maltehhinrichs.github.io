@@ -6,7 +6,7 @@ function initCVDownload() {
         setup() {
             const isDownloading = ref(false);
             // The direct path to the CV file created by your GitHub Action.
-            const cvFilePath = 'files/cv-latest.pdf';
+            const cvFilePath = '/files/cv-latest.pdf';
 
             const downloadCV = () => {
                 if (isDownloading.value) return;
