@@ -26,8 +26,8 @@ jobs:
 
       - name: Download CV files from MEGA
         run: |
-          # Use mega-get with the public folder link stored in secrets
-          mega-get "${{ secrets.MEGA_FOLDER }}" .
+          mega-get "${{ secrets.MEGA_FOLDER }}/Academic_CV.qmd" .
+          mega-get "${{ secrets.MEGA_FOLDER }}/Academic_CV.pdf" .
 
       - name: Commit and push updated CV
         run: |
