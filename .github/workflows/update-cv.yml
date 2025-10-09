@@ -14,24 +14,30 @@ jobs:
         run: |
           set -e
           sudo apt-get update
-          sudo apt-get install -y curl gnupg apt-transport-https
-          curl -fsSL https://mega.nz/linux/repo/xUbuntu_24.04/Release.key | \
+          sudo apt-get install -y curl gnupg apt-transport-https lsb-release
+          # Get the Ubuntu version number (e.g., 22.04) to make the script robust
+          VERSION_ID=$(lsb_release -rs)
+          curl -fsSL "https://mega.nz/linux/repo/xUbuntu_${VERSION_ID}/Release.key" | \
             sudo gpg --dearmor -o /usr/share/keyrings/mega-archive-keyring.gpg
-          echo "deb [signed-by=/usr/share/keyrings/mega-archive-keyring.gpg] https://mega.nz/linux/repo/xUbuntu_24.04/ ./" | \
+          echo "deb [signed-by=/usr/share/keyrings/mega-archive-keyring.gpg] https://mega.nz/linux/repo/xUbuntu_${VERSION_ID}/ ./" | \
             sudo tee /etc/apt/sources.list.d/megacmd.list
           sudo apt-get update
           sudo apt-get install -y megacmd
 
-      - name: Download CV from MEGA
+      - name: Download CV files from MEGA
         run: |
-          mega-login --session "${{ secrets.MEGA_SESSION_KEY }}"
-          mega-get "mega:/Privat/Lebenslauf/Academic_CV.qmd" .
+          # Use mega-get with the public folder link stored in secrets
+          mega-get "${{ secrets.MEGA_FOLDER }}" .
 
       - name: Commit and push updated CV
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mv "Academic_CV.qmd" content/cv.md
-          git add content/cv.md
+          # Rename both files to their new names
+          mv "Academic_CV.qmd" "cv-latest.md"
+          mv "Academic_CV.pdf" "cv-latest.pdf"
+          # Add both files to the staging area
+          git add cv-latest.md cv-latest.pdf
+          # Commit the changes, or echo a message if there are no changes
           git commit -m "Updated CV from Mega" || echo "No changes to commit"
           git push
