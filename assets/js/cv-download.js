@@ -1,46 +1,29 @@
 // CV Download functionality for Academic Pages
-function initCVDownload(megaUrl) {
+function initCVDownload() {
     const { createApp, ref } = Vue;
     
     createApp({
         setup() {
             const isDownloading = ref(false);
-            const apiEndpoint = 'https://mega.wldbs.workers.dev/api/info';
+            // The direct path to the CV file created by your GitHub Action.
+            const cvFilePath = 'files/cv-latest.pdf';
 
-            const downloadCV = async () => {
+            const downloadCV = () => {
                 if (isDownloading.value) return;
 
                 isDownloading.value = true;
 
-                try {
-                    const formData = new FormData();
-                    formData.append('megaurl', megaUrl);
+                // We keep a short delay to allow the "Preparing Download..." state to show.
+                setTimeout(() => {
+                    // Trigger the download by simply navigating to the file.
+                    window.location.href = cvFilePath;
 
-                    const response = await fetch(apiEndpoint, {
-                        method: 'POST',
-                        body: formData,
-                    });
-
-                    const data = await response.json();
-
-                    if (data.ok) {
-                        const base64Url = btoa(megaUrl);
-                        const directLink = `https://mega.wldbs.workers.dev/download?url=${base64Url}`;
-                        
-                        setTimeout(() => {
-                            window.location.href = directLink;
-                            setTimeout(() => {
-                                isDownloading.value = false;
-                            }, 3000);
-                        }, 500);
-                    } else {
-                        throw new Error(data.error || 'Could not access CV file');
-                    }
-                } catch (error) {
-                    console.error('Download error:', error);
-                    alert('Sorry, there was an error downloading the CV. Please try again later.');
-                    isDownloading.value = false;
-                }
+                    // Reset the button's state after a few seconds,
+                    // giving the browser time to process the download.
+                    setTimeout(() => {
+                        isDownloading.value = false;
+                    }, 3000);
+                }, 500);
             };
 
             return {
@@ -48,6 +31,7 @@ function initCVDownload(megaUrl) {
                 downloadCV
             };
         },
+        // The template is unchanged to keep the button design identical.
         template: `
             <button 
                 @click="downloadCV" 
