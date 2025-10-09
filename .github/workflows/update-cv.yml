@@ -21,8 +21,8 @@ jobs:
           MEGACMD_PATH="./megacmd-extracted/usr/bin"
           mkdir -p ~/.megaCmd
           echo "${{ secrets.MEGA_SESSION_KEY }}" > ~/.megaCmd/session
-          $MEGACMD_PATH/mega-get "mega:/Privat/Lebenslauf/Academic_CV.qmd" .
-        
+          $MEGACMD_PATH/mega-cmd get "mega:/Privat/Lebenslauf/Academic_CV.qmd" .
+
       - name: Commit and push updated CV
         run: |
           git config user.name "github-actions[bot]"
