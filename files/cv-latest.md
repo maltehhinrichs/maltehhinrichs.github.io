@@ -22,7 +22,7 @@ header-includes:
   - \usepackage{url}
   - \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black]{hyperref}
   - \pretitle{\begin{center}\vspace{-2em}\Huge\bfseries}
-  - \posttitle{\par\normalsize\vspace{0.5em} Department of Economics, Queen's University Belfast \\ Riddel Hall, 185 Stranmillis Road, Belfast BT9 5EE, UK \\ \vspace{0.25em} \href{mailto:mhinrichs01@qub.ac.uk}{mhinrichs01@qub.ac.uk} $\cdot$ \href{https://maltehhinrichs.github.io}{Website} $\cdot$ \href{https://orcid.org/0000-0003-1950-2644}{ORCID}\end{center}\vspace{0.5em}\rule{\textwidth}{1pt}\vspace{-4em}}
+  - \posttitle{\par\normalsize\vspace{0.5em} Department of Economics, Queen's University Belfast \\ Riddel Hall, 185 Stranmillis Road, Belfast BT9 5EE, UK \\ \vspace{0.25em} \href{mailto:mhinrichs01@qub.ac.uk}{mhinrichs01@qub.ac.uk} $\cdot$ \href{https://maltehhinrichs.github.io}{Website} $\cdot$ \href{https://orcid.org/0000-0003-1950-2644}{ORCID}\end{center}\rule{\textwidth}{1pt}\vspace{-4em}}
   - \setlength{\droptitle}{-3em}
   - \pagestyle{fancy}
   - \fancyhf{}
@@ -47,11 +47,9 @@ keep-tex: true
 **PhD in Economics** \hfill 10/2023--present  
 Queen's University Belfast, UK  
 Dissertation title: *Renewable Energy in the Industrial Revolution*  
-Supervisors: Alan Fernihough and Christopher Colvin
 
 **MSc Economics** \hfill 09/2020--08/2022  
 University of Mannheim, Germany  
-Grade: 1.6 (1.0=excellent, 4.0=pass)  
 Thesis: *Engines of Growth? The Role of the Steam Engine for Long-Run*  
 *Economic Development in Germany*
 
@@ -60,7 +58,6 @@ NHH Norwegian School of Economics, Norway
 
 **BSc Economics** \hfill 09/2017--08/2020  
 University of Mannheim, Germany  
-Grade: 1.3 (1.0=excellent, 4.0=pass)  
 Thesis: *The Long-Term Effects of Colonialism on Income Inequality*
 
 **Visiting Student** \hfill 08/2019--12/2019  
@@ -72,26 +69,28 @@ Hong Kong University of Science and Technology, Hong Kong
 
 Research Student, Centre for Economics, Policy and History \hfill 10/2023--present
 
+Research Student, Centre for Economic History, Queen’s University Belfast \hfill 10/2023--present
+
 ---
 
-# Working Papers and Works in Progress
-
-"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
-*Work in progress*
+# Working Papers
 
 "Water mills and human capital accumulation in industrialising Prussia"  
 *Revise and Resubmit at Explorations in Economic History*
+
+"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
+*Work in progress*
 
 ---
 
 # Teaching Experience
 
-**University of Mannheim**  
-Principles of Economics, Teaching Assistant \hfill 09/2018--12/2018  
-Macroeconomics A, Teaching Assistant \hfill 02/2020--08/2020
-
 **Queen's University Belfast**  
 ECO1013 -- Principles of Economics, Teaching Assistant \hfill 09/2024--present
+
+**University of Mannheim**  
+Macroeconomics A, Teaching Assistant \hfill 02/2020--08/2020  
+Principles of Economics, Teaching Assistant \hfill 09/2018--12/2018
 
 ---
 
@@ -107,9 +106,9 @@ ECO1013 -- Principles of Economics, Teaching Assistant \hfill 09/2024--present
 
 # Research Grants and Funding
 
-**EHES Conference Travel and Accommodation Grant** \hfill 07/2025
+<!-- **EHES Conference Travel and Accommodation Grant** \hfill 07/2025 -->
 
-**EHS Young Scholar Conference Bursary** \hfill 01/2025
+**Economic History Society Young Scholar Conference Bursary** \hfill 01/2025
 
 **CEPH Studentship**, Irish Higher Education Authority, full funding for PhD studies \hfill 10/2023
 
@@ -135,36 +134,36 @@ Irish Economic Association
 
 **CEPH Workshop in Quantitative Economic History**, Queen's University Belfast \hfill 06/2025
 
-**QBS PGR Conference**, Queen's University Belfast \hfill 06/2025
+**Queen's Postgraduate Research Conference**, Queen's University Belfast \hfill 06/2025
 
 **Economic History Society Conference**, University of Strathclyde \hfill 04/2025
 
-**QUCEH PhD Discussion Group**, Queen's University Belfast \hfill 02/2025
+**Centre for Economic History PhD Discussion Group**, Queen's University Belfast \hfill 02/2025
 
 ## 2024
 
-**EHS Residential Training**, University of Warwick \hfill 11/2024
+**Economic History Society Residential Training**, University of Warwick \hfill 11/2024
 
 **Financial, Economic and Business History Summer School**, University of Groningen \hfill 06/2024
 
-**QUCEH Seminar Series**, Queen's University Belfast \hfill 04/2024
+**Centre for Economic History Seminar Series**, Queen's University Belfast \hfill 04/2024
 
-**QUCEH PhD Discussion Group**, Queen's University Belfast \hfill 03/2024
+**Centre for Economic History PhD Discussion Group**, Queen's University Belfast \hfill 03/2024
 
 ---
 
 # Professional Development
 
-**Participant**, Graduate Teaching Assistant Workshops, The Economics Network \hfill 01/2025
+**Graduate Teaching Assistant Workshop**, The Economics Network \hfill 01/2025
 
-**Participant**, Weekend Workshop for Teaching Assistants, University of Mannheim \hfill 09/2018
+**Workshop for Teaching Assistants**, University of Mannheim \hfill 09/2018
 
 ---
 
 # Industry Experience
 
 **KPMG AG Wirtschaftsprüfungsgesellschaft**  
-Junior Consultant, Global Transfer Pricing \hfill 04/2023--09/2023
+Junior Consultant, Global Transfer Pricing (Mannheim, Germany) \hfill 04/2023--09/2023
 
 ---
 
@@ -178,19 +177,28 @@ Junior Consultant, Global Transfer Pricing \hfill 04/2023--09/2023
 
 # References
 
-**Alan Fernihough**, Queen's University Belfast  
-*Fields: Economic history, demography, economic growth*
+**Chris Colvin** (PhD Supervisor)  
+Queen's University Belfast  
+\href{mailto:chris.colvin@qub.ac.uk}{chris.colvin@qub.ac.uk} $\cdot$ \href{https://chriscolvin.org}{Website}
 
-**Chris Colvin**, Queen's University Belfast  
-*Fields: Economic history, business history, famines and pandemics*
+**Arcangelo Dimico** (Teaching Reference)  
+Queen's University Belfast   
+\href{mailto:a.dimico@qub.ac.uk}{a.dimico@qub.ac.uk} $\cdot$ \href{https://sites.google.com/site/arcangelodimico}{Website}
 
-**Alexander Donges**, University of Mannheim  
-*Fields: Economic history, innovation, competition*
+**Alexander Donges** (MSc & BSc Advisor)  
+University of Mannheim  
+\href{mailto:donges@uni-mannheim.de}{donges@uni-mannheim.de} $\cdot$ \href{https://sites.google.com/view/alexanderdonges/}{Website}
+
+**Alan Fernihough** (PhD Supervisor)  
+Queen's University Belfast  
+\href{mailto:a.fernihough@qub.ac.uk}{a.fernihough@qub.ac.uk} $\cdot$ \href{https://pure.qub.ac.uk/en/persons/alan-fernihough}{Website}
 
 
 
 ```{r}
 #| echo: false
 #| results: asis
+
+invisible(Sys.setlocale("LC_TIME", "English_United Kingdom"))
 cat("\\vspace{2em}\n\n\\begin{center}\n\\textit{Last updated:", format(Sys.Date(), '%B %Y'), "}\n\\end{center}")
 ```
