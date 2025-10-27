@@ -19,7 +19,7 @@ author_profile: true
   Queen's University Belfast  
   06/2025
 
-- **QBS PGR Conference**  
+- **Queen's Postgraduate Research Conference**  
   Queen's University Belfast  
   06/2025
 
@@ -27,11 +27,11 @@ author_profile: true
   University of Strathclyde  
   04/2025
 
-- **QUCEH PhD Discussion Group**  
+- **Centre for Economic History PhD Discussion Group**  
   Queen's University Belfast  
   02/2025
 
-- **EHS Residential Training**  
+- **Economic History Society Residential Training**  
   University of Warwick  
   11/2024
 
@@ -39,10 +39,10 @@ author_profile: true
   University of Groningen  
   06/2024
 
-- **QUCEH Seminar Series**  
+- **Centre for Economic History Seminar Series**  
   Queen's University Belfast  
   04/2024
 
-- **QUCEH PhD Discussion Group**  
+- **Centre for Economic History PhD Discussion Group**  
   Queen's University Belfast  
   03/2024
