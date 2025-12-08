@@ -22,7 +22,7 @@ header-includes:
   - \usepackage{url}
   - \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black]{hyperref}
   - \pretitle{\begin{center}\vspace{-2em}\Huge\bfseries}
-  - \posttitle{\par\normalsize\vspace{0.5em} Department of Economics, Queen's University Belfast \\ Riddel Hall, 185 Stranmillis Road, Belfast BT9 5EE, UK \\ \vspace{0.25em} \href{mailto:mhinrichs01@qub.ac.uk}{mhinrichs01@qub.ac.uk} $\cdot$ \href{https://maltehhinrichs.github.io}{Website} $\cdot$ \href{https://orcid.org/0000-0003-1950-2644}{ORCID}\end{center}\rule{\textwidth}{1pt}\vspace{-4em}}
+  - \posttitle{\par\normalsize\vspace{0.5em} Department of Economics, Queen's University Belfast \\ Riddel Hall, 185 Stranmillis Road, Belfast BT9 5EE, UK \\ \vspace{0.25em} \href{mailto:mhinrichs01@qub.ac.uk}{mhinrichs01@qub.ac.uk} $\cdot$ \href{https://maltehhinrichs.de}{Website} $\cdot$ \href{https://orcid.org/0000-0003-1950-2644}{ORCID}\end{center}\rule{\textwidth}{1pt}\vspace{-4em}}
   - \setlength{\droptitle}{-3em}
   - \pagestyle{fancy}
   - \fancyhf{}
