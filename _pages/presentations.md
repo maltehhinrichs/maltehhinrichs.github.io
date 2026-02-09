@@ -11,6 +11,14 @@ author_profile: true
 
 ## Full List
 
+- **Irish Postgraduate and Early Career Economics Workshop**  
+  Maynooth University  
+  01/2026
+
+- **Department of Economics Seminar Series**  
+  Heriot-Watt University Edinburgh  
+  01/2026
+
 - **European Historical Economics Society Conference**  
   University of Hohenheim  
   09/2025
