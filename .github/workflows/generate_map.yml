@@ -4,7 +4,7 @@ on:
   # Run this workflow automatically when presentations.md is changed
   push:
     paths:
-      - 'presentations.md'
+      - '_pages/presentations.md'
       
   # Allow you to run this workflow manually from the Actions tab
   workflow_dispatch:
