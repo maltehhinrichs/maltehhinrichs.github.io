@@ -11,6 +11,10 @@ author_profile: true
 
 ## Full List
 
+- **Economic History Seminar**  
+  University of Hohenheim  
+  03/2026
+
 - **Irish Postgraduate and Early Career Economics Workshop**  
   Maynooth University  
   01/2026
