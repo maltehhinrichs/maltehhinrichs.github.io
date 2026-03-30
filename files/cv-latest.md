@@ -130,6 +130,8 @@ Irish Economic Association
 
 ## 2026
 
+**Economic History Seminar**, University of Hohenheim \hfill 03/2026
+
 **Irish Postgraduate and Early Career Economics Workshop**, Maynooth University \hfill 01/2026
 
 **Department of Economics Seminar Series**, Heriot-Watt University Edinburgh \hfill 01/2026
