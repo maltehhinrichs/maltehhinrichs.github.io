@@ -39,7 +39,7 @@ My research focuses on the intersection of economic history, technological chang
   Does technological change favor agile entrants or adaptable incumbents? I examine this using Scotland’s industrialization, testing whether steam power allowed new locations to "leapfrog" centers of water power. Using a newly constructed dataset linking over 1,200 pre-industrial mills to parish-level outcomes, and an instrumental variable strategy based on geographic endowments, I reject the leapfrogging hypothesis. An additional mill in 1755 caused 8% higher long-run population growth (driven by migration), with effects intensifying precisely when steam power became abundant. Micro-evidence reveals that hydraulically advantaged mill sites largely survived, transitioned to industrial production and avoided obsolescence by integrating steam power as a complementary technology. The findings demonstrate that proto-industrial water power provided the critical infrastructure and human capital for the steam age, challenging the view that coal endowments alone determined the industrial map. 
   </details>
 
-- **"Mapping the Malthusian Bound: A First-Nature Index of European City Growth"**  
+- **"Mapping the Malthusian bound: a first-nature index of European city growth"**  
   *Work in progress*
   <details>
   <summary>Abstract</summary>
