@@ -81,6 +81,9 @@ Research Student, Centre for Economic History, Queen’s University Belfast \hfi
 "Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
 *Work in progress*
 
+"Mapping the Malthusian bound: a first-nature index of European city growth"  
+*Work in progress*
+
 ---
 
 # Teaching Experience
