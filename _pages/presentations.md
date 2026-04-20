@@ -11,6 +11,10 @@ author_profile: true
 
 ## Full List
 
+- **Economic History Society Conference**  
+  London School of Economics  
+  04/2026
+
 - **Economic History Seminar**  
   University of Hohenheim  
   03/2026
