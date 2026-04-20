@@ -76,7 +76,7 @@ Research Student, Centre for Economic History, Queen’s University Belfast \hfi
 # Working Papers
 
 "Water mills and human capital accumulation in industrialising Prussia"  
-*Revise and Resubmit at Explorations in Economic History*
+*Conditionally Accepted at Explorations in Economic History*
 
 "Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
 *Work in progress*
@@ -99,6 +99,8 @@ Principles of Economics, Teaching Assistant \hfill 09/2018--12/2018
 
 # Honours and Awards
 
+**New Researchers’ Prize**, Economic History Society \hfill 2026
+
 **Graduated in top 20% of MSc Economics cohort**, University of Mannheim \hfill 2022
 
 **Graduated in top 10% of BSc Economics cohort**, University of Mannheim \hfill 2020
@@ -109,7 +111,7 @@ Principles of Economics, Teaching Assistant \hfill 09/2018--12/2018
 
 # Research Grants and Funding
 
-<!-- **EHES Conference Travel and Accommodation Grant** \hfill 07/2025 -->
+**EHES Conference Travel and Accommodation Grant** \hfill 07/2025
 
 **Economic History Society Young Scholar Conference Bursary** \hfill 01/2025
 
@@ -132,6 +134,8 @@ Irish Economic Association
 # Academic Presentations
 
 ## 2026
+
+**Economic History Society Conference**, London School of Economics \hfill 04/2026
 
 **Economic History Seminar**, University of Hohenheim \hfill 03/2026
 
