@@ -76,7 +76,7 @@ Research Student, Centre for Economic History, Queen’s University Belfast \hfi
 # Working Papers
 
 "Water mills and human capital accumulation in industrialising Prussia"  
-*Conditionally Accepted at Explorations in Economic History*
+*Accepted at Explorations in Economic History*
 
 "Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
 *Work in progress*
