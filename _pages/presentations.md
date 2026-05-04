@@ -11,20 +11,24 @@ author_profile: true
 
 ## Full List
 
-- **Economic History Society Conference**  
-  London School of Economics  
-  04/2026
-
 - **Economic History Seminar**  
   University of Hohenheim  
   03/2026
 
-- **Irish Postgraduate and Early Career Economics Workshop**  
-  Maynooth University  
-  01/2026
-
 - **Department of Economics Seminar Series**  
   Heriot-Watt University Edinburgh  
+  01/2026
+
+- **Centre for Economic History Seminar Series**  
+  Queen's University Belfast  
+  04/2024
+
+- **Economic History Society Conference**  
+  London School of Economics  
+  04/2026
+
+- **Irish Postgraduate and Early Career Economics Workshop**  
+  Maynooth University  
   01/2026
 
 - **European Historical Economics Society Conference**  
@@ -46,18 +50,6 @@ author_profile: true
 - **Centre for Economic History PhD Discussion Group**  
   Queen's University Belfast  
   02/2025
-
-- **Economic History Society Residential Training**  
-  University of Warwick  
-  11/2024
-
-- **Financial, Economic and Business History Summer School**  
-  University of Groningen  
-  06/2024
-
-- **Centre for Economic History Seminar Series**  
-  Queen's University Belfast  
-  04/2024
 
 - **Centre for Economic History PhD Discussion Group**  
   Queen's University Belfast  
