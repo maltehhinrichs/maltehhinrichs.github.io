@@ -11,6 +11,10 @@ author_profile: true
 
 ## Full List
 
+- **Oxford Graduate Seminar**  
+  University of Oxford  
+  05/2026
+
 - **Economic History Seminar**  
   University of Hohenheim  
   03/2026
