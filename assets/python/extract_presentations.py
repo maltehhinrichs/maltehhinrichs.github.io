@@ -6,10 +6,11 @@ def extract_presentations(md_path):
         lines = f.readlines()
 
     in_section = False
-    presentations = []
+    presentations = {}
+    current_category = "Presentations"
 
+    # Regex to capture the Presentation, University, and Date 
     pat_entry = re.compile(r"^\*\*(.+?)\*\*,\s*(.+?)\s*\\hfill\s*(.+)")
-    pat_year = re.compile(r"^##\s+(\d{4})")
 
     for line in lines:
         if line.strip() == "# Academic Presentations":
@@ -19,15 +20,23 @@ def extract_presentations(md_path):
             break  # End of section
 
         if in_section:
-            if pat_year.match(line.strip()):
-                continue  # skip year headers
+            # Dynamically capture subcategories (e.g., "## Invited Talks")
+            if line.startswith("## "):
+                current_category = line.replace("##", "").strip()
+                if current_category not in presentations:
+                    presentations[current_category] = []
+                continue
 
             entry_match = pat_entry.match(line.strip())
             if entry_match:
                 conference = entry_match.group(1)
                 university = entry_match.group(2)
                 date = entry_match.group(3)
-                presentations.append({
+                
+                if current_category not in presentations:
+                    presentations[current_category] = []
+                    
+                presentations[current_category].append({
                     "conference": conference,
                     "university": university,
                     "date": date
@@ -37,12 +46,17 @@ def extract_presentations(md_path):
 
 def format_presentations_md(presentations):
     out = []
-    for p in presentations:
-        out.append(
-            f"- **{p['conference']}**  \n"
-            f"  {p['university']}  \n"
-            f"  {p['date']}\n"
-        )
+    # Loop through the parsed categories and create subheadings
+    for category, pres_list in presentations.items():
+        if not pres_list:
+            continue
+        out.append(f"### {category}\n")
+        for p in pres_list:
+            out.append(
+                f"- **{p['conference']}** \n"
+                f"  {p['university']}  \n"
+                f"  {p['date']}\n"
+            )
     return "\n".join(out)
 
 if __name__ == "__main__":
