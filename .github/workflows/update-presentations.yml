@@ -1,4 +1,4 @@
-name: Weekly Presentations Extraction
+name: Weekly Presentations Extraction & Map Generation
 
 on:
   schedule:
@@ -9,7 +9,6 @@ jobs:
   update-presentations:
     runs-on: ubuntu-latest
 
-    # Necessary permission!
     permissions:
       contents: write
       
@@ -20,15 +19,25 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.10'
+          cache: 'pip' 
+          cache-dependency-path: assets/python/python-requirements.txt
+      
+      - name: Install dependencies
+        run: pip install -r assets/python/python-requirements.txt
 
       - name: Extract presentations
         run: python assets/python/extract_presentations.py
+        
+      # Generate the map data in the same workflow so it isn't blocked!
+      - name: Generate presentation map
+        run: python assets/python/generate_map.py
 
       - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _pages/presentations.md || echo "No changes to commit"
-          git diff-index --quiet HEAD || git commit -m "Automated update of presentations list"
+          # Add both the updated markdown and javascript map script to the commit
+          git add _pages/presentations.md talkmap/org-locations.js || echo "No changes to commit"
+          git diff-index --quiet HEAD || git commit -m "Automated update of presentations list and map"
           git push origin HEAD:${GITHUB_REF_NAME}
