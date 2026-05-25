@@ -11,50 +11,62 @@ author_profile: true
 
 ## Full List
 
-- **Oxford Graduate Seminar**  
+### Invited Talks
+
+- **Oxford Graduate Seminar** 
   University of Oxford  
   05/2026
 
-- **Economic History Seminar**  
+- **Economic History Seminar** 
   University of Hohenheim  
   03/2026
 
-- **Department of Economics Seminar Series**  
+- **Department of Economics Seminar Series** 
   Heriot-Watt University Edinburgh  
   01/2026
 
-- **Centre for Economic History Seminar Series**  
+- **Centre for Economic History Seminar Series** 
   Queen's University Belfast  
   04/2024
 
-- **Economic History Society Conference**  
+### Conference and Workshop Presentations
+
+- **CEPH PhD Workshop** 
+  Queen's University Belfast  
+  05/2026
+
+- **Queen's Postgraduate Research Conference** 
+  Queen's University Belfast  
+  05/2026
+
+- **Economic History Society Conference** 
   London School of Economics  
   04/2026
 
-- **Irish Postgraduate and Early Career Economics Workshop**  
+- **Irish Postgraduate and Early Career Economics Workshop** 
   Maynooth University  
   01/2026
 
-- **European Historical Economics Society Conference**  
+- **European Historical Economics Society Conference** 
   University of Hohenheim  
   09/2025
 
-- **CEPH Workshop in Quantitative Economic History**  
+- **CEPH Workshop in Quantitative Economic History** 
   Queen's University Belfast  
   06/2025
 
-- **Queen's Postgraduate Research Conference**  
+- **Queen's Postgraduate Research Conference** 
   Queen's University Belfast  
   06/2025
 
-- **Economic History Society Conference**  
+- **Economic History Society Conference** 
   University of Strathclyde  
   04/2025
 
-- **Centre for Economic History PhD Discussion Group**  
+- **Centre for Economic History PhD Discussion Group** 
   Queen's University Belfast  
   02/2025
 
-- **Centre for Economic History PhD Discussion Group**  
+- **Centre for Economic History PhD Discussion Group** 
   Queen's University Belfast  
   03/2024
