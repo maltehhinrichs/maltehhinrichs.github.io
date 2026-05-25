@@ -6,7 +6,7 @@ papersize: a4
 format: pdf
 colorlinks: true
 linkcolor: black
-urlcolor: black
+urlcolor: teal
 pdf-engine: pdflatex
 toc: false
 number-sections: false
@@ -79,8 +79,9 @@ Research Student, Centre for Economic History, Queen’s University Belfast \hfi
 
 # Publications
 
-"Water mills and human capital accumulation in industrialising Prussia" \hfill forthcoming  
+"Water mills and human capital accumulation in industrialising Prussia" \hfill 07/2026  
 *Explorations in Economic History*  
+Article: [doi:10.1016/j.eeh.2026.101767](https://doi.org/10.1016/j.eeh.2026.101767)  
 Replication package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g4b39.2)
 
 ---
@@ -155,6 +156,10 @@ Irish Economic Association
 **Centre for Economic History Seminar Series**, Queen's University Belfast \hfill 04/2024
 
 ## Conference and Workshop Presentations
+
+**CEPH PhD Workshop**, Queen's University Belfast \hfill 05/2026
+
+**Queen's Postgraduate Research Conference**, Queen's University Belfast \hfill 05/2026
 
 **Economic History Society Conference**, London School of Economics \hfill 04/2026
 
