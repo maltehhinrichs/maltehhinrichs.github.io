@@ -23,14 +23,18 @@ def get_country_for_uni(venue):
     try:
         query = urllib.parse.quote(venue)
         url = f"https://api.ror.org/organizations?query={query}"
-        # Added a more robust User-Agent, which some APIs require to prevent blocking
         req = urllib.request.Request(url, headers={'User-Agent': 'AcademicMapGenerator/1.0'})
         
         with urllib.request.urlopen(req, timeout=5) as response:
             data = json.loads(response.read().decode())
             if data.get('items') and len(data['items']) > 0:
-                # Get the country of the top search result
-                return data['items'][0]['country']['country_name']
+                item = data['items'][0]
+                # Check for ROR API v2 schema
+                if 'locations' in item and len(item['locations']) > 0:
+                    return item['locations'][0].get('geonames_details', {}).get('country_name')
+                # Fallback for ROR API v1 schema
+                elif 'country' in item and 'country_name' in item['country']:
+                    return item['country']['country_name']
     except Exception as e:
         print(f"     -> [Debug] ROR API lookup failed: {e}")
         pass
@@ -48,7 +52,8 @@ def parse_presentations(file_path):
             while i < len(raw_lines):
                 line = raw_lines[i]
                 if line.startswith("- **"):
-                    event = re.sub(r"\*\*(.*?)\*\*", r"\1", line.lstrip("- ").strip())
+                    # Strip the <br> out of the event name to prevent double breaks in JS
+                    event = re.sub(r"\*\*(.*?)\*\*", r"\1", line.lstrip("- ").strip()).replace("<br>", "").strip()
                     if i+2 < len(raw_lines):
                         venue = raw_lines[i+1].replace("<br>", "").strip()
                         date = raw_lines[i+2].replace("<br>", "").strip()
@@ -70,7 +75,6 @@ def parse_presentations(file_path):
 
 def geocode_locations(presentations):
     print("\n-> Geocoding locations (this may take a moment)...")
-    # Switched back to OpenStreetMap (Nominatim)
     geocoder = Nominatim(user_agent="academic_cv_map_generator")
     geocoded_locations = {}
 
@@ -90,7 +94,6 @@ def geocode_locations(presentations):
 
         # 2. Ask Nominatim for coordinates using the enriched search query
         try:
-            # CRITICAL: Nominatim requires a 1 second delay between requests
             time.sleep(1) 
             location_data = geocoder.geocode(search_query, timeout=GEOCODE_TIMEOUT)
 
@@ -98,9 +101,8 @@ def geocode_locations(presentations):
                 geocoded_locations[description] = (location_data.latitude, location_data.longitude)
                 print(f"     -> Success: Found at ({location_data.latitude:.4f}, {location_data.longitude:.4f})")
             else:
-                # Fallback: Try the original name without the country if the first try fails
                 if search_query != venue:
-                    time.sleep(1) # Add delay for the fallback request too
+                    time.sleep(1) 
                     location_data = geocoder.geocode(venue, timeout=GEOCODE_TIMEOUT)
                     if location_data:
                         geocoded_locations[description] = (location_data.latitude, location_data.longitude)
