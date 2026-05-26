@@ -13,7 +13,7 @@ import os
 import time
 import re
 import frontmatter
-from geopy import Nominatim
+from geopy.geocoders import ArcGIS
 from geopy.exc import GeocoderTimedOut
 
 # --- Configuration ---
@@ -64,9 +64,9 @@ def parse_presentations(file_path):
         return None
 
 def geocode_locations(presentations):
-    """Geocodes the 'venue' for each presentation using Nominatim."""
+    """Geocodes the 'venue' for each presentation using ArcGIS."""
     print("\n-> Geocoding locations (this may take a moment)...")
-    geocoder = Nominatim(user_agent="academic_pages_map_generator")
+    geocoder = ArcGIS()
     geocoded_locations = {}
 
     for p in presentations:
@@ -77,8 +77,6 @@ def geocode_locations(presentations):
 
         print(f"   Geocoding: {venue}")
         try:
-            # Add a 1-second delay between requests to respect Nominatim's usage policy
-            time.sleep(1) 
             location_data = geocoder.geocode(venue, timeout=GEOCODE_TIMEOUT)
 
             if location_data:
