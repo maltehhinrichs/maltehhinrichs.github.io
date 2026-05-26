@@ -70,3 +70,21 @@ author_profile: true
 - **Centre for Economic History PhD Discussion Group**<br>
   Queen's University Belfast<br>
   03/2024
+
+### Professional Development
+
+- **Graduate Teaching Assistant Workshop**<br>
+  The Economics Network<br>
+  01/2025
+
+- **Economic History Society Residential Training**<br>
+  University of Warwick<br>
+  11/2024
+
+- **Financial, Economic and Business History Summer School**<br>
+  University of Groningen<br>
+  06/2024
+
+- **Workshop for Teaching Assistants**<br>
+  University of Mannheim<br>
+  09/2018
