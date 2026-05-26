@@ -13,60 +13,60 @@ author_profile: true
 
 ### Invited Talks
 
-- **Oxford Graduate Seminar** 
-  University of Oxford  
+- **Oxford Graduate Seminar**<br>
+  University of Oxford<br>
   05/2026
 
-- **Economic History Seminar** 
-  University of Hohenheim  
+- **Economic History Seminar**<br>
+  University of Hohenheim<br>
   03/2026
 
-- **Department of Economics Seminar Series** 
-  Heriot-Watt University Edinburgh  
+- **Department of Economics Seminar Series**<br>
+  Heriot-Watt University Edinburgh<br>
   01/2026
 
-- **Centre for Economic History Seminar Series** 
-  Queen's University Belfast  
+- **Centre for Economic History Seminar Series**<br>
+  Queen's University Belfast<br>
   04/2024
 
 ### Conference and Workshop Presentations
 
-- **CEPH PhD Workshop** 
-  Queen's University Belfast  
+- **CEPH PhD Workshop**<br>
+  Queen's University Belfast<br>
   05/2026
 
-- **Queen's Postgraduate Research Conference** 
-  Queen's University Belfast  
+- **Queen's Postgraduate Research Conference**<br>
+  Queen's University Belfast<br>
   05/2026
 
-- **Economic History Society Conference** 
-  London School of Economics  
+- **Economic History Society Conference**<br>
+  London School of Economics<br>
   04/2026
 
-- **Irish Postgraduate and Early Career Economics Workshop** 
-  Maynooth University  
+- **Irish Postgraduate and Early Career Economics Workshop**<br>
+  Maynooth University<br>
   01/2026
 
-- **European Historical Economics Society Conference** 
-  University of Hohenheim  
+- **European Historical Economics Society Conference**<br>
+  University of Hohenheim<br>
   09/2025
 
-- **CEPH Workshop in Quantitative Economic History** 
-  Queen's University Belfast  
+- **CEPH Workshop in Quantitative Economic History**<br>
+  Queen's University Belfast<br>
   06/2025
 
-- **Queen's Postgraduate Research Conference** 
-  Queen's University Belfast  
+- **Queen's Postgraduate Research Conference**<br>
+  Queen's University Belfast<br>
   06/2025
 
-- **Economic History Society Conference** 
-  University of Strathclyde  
+- **Economic History Society Conference**<br>
+  University of Strathclyde<br>
   04/2025
 
-- **Centre for Economic History PhD Discussion Group** 
-  Queen's University Belfast  
+- **Centre for Economic History PhD Discussion Group**<br>
+  Queen's University Belfast<br>
   02/2025
 
-- **Centre for Economic History PhD Discussion Group** 
-  Queen's University Belfast  
+- **Centre for Economic History PhD Discussion Group**<br>
+  Queen's University Belfast<br>
   03/2024
