@@ -1,28 +1,37 @@
 # generate_map.py
-# Description: Generates a map of presentation locations from presentations.md.
-#
-# Instructions:
-# 1. Make sure this script is in the root of your GitHub Pages repository.
-# 2. Ensure your presentation list is in a file named `presentations.md`.
-# 3. Run `pip install geopy python-frontmatter`.
-# 4. Run `python generate_map.py` from your terminal.
-# 5. Add the generated map to your page using the iframe code provided after running.
-#
-
 import os
-import time
 import re
+import json
+import urllib.request
+import urllib.parse
 import frontmatter
 from geopy.geocoders import ArcGIS
 from geopy.exc import GeocoderTimedOut
 
 # --- Configuration ---
-INPUT_FILE = os.path.join("_pages", "presentations.md")     # The markdown file with your presentation list
-OUTPUT_FOLDER = "talkmap"       # The folder to save map files in
+INPUT_FILE = os.path.join("_pages", "presentations.md")
+OUTPUT_FOLDER = "talkmap"
 JS_OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, "org-locations.js")
-GEOCODE_TIMEOUT = 10            # Timeout in seconds for geocoding requests
+GEOCODE_TIMEOUT = 10
 
-import re
+def get_country_for_uni(venue):
+    """
+    Queries the open Research Organization Registry (ROR) API 
+    to find the country of the most famous institution with this name.
+    """
+    try:
+        query = urllib.parse.quote(venue)
+        url = f"https://api.ror.org/organizations?query={query}"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Academic Map Generator/1.0'})
+        
+        with urllib.request.urlopen(req, timeout=5) as response:
+            data = json.loads(response.read().decode())
+            if data.get('items') and len(data['items']) > 0:
+                # Get the country of the top search result
+                return data['items'][0]['country']['country_name']
+    except Exception:
+        pass
+    return None
 
 def parse_presentations(file_path):
     print("-> Parsing presentations.md...")
@@ -30,19 +39,16 @@ def parse_presentations(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             post = frontmatter.load(f)
-
             raw_lines = [line.rstrip() for line in post.content.splitlines() if line.strip()]
 
             i = 0
             while i < len(raw_lines):
                 line = raw_lines[i]
-
-                # Look for a new entry starting with "- **"
                 if line.startswith("- **"):
                     event = re.sub(r"\*\*(.*?)\*\*", r"\1", line.lstrip("- ").strip())
                     if i+2 < len(raw_lines):
-                        venue = raw_lines[i+1].strip()
-                        date = raw_lines[i+2].strip()
+                        venue = raw_lines[i+1].replace("<br>", "").strip()
+                        date = raw_lines[i+2].replace("<br>", "").strip()
                         presentations.append({
                             "event": event,
                             "venue": venue,
@@ -53,18 +59,13 @@ def parse_presentations(file_path):
                 i += 1
 
         print(f"   Success: Found {len(presentations)} presentations.")
-        print("   Preview of parsed entries:")
-        for p in presentations:
-            print(f"     {p['event']} @ {p['venue']} ({p['date']})")
-
         return presentations
 
     except FileNotFoundError:
-        print(f"   Error: {file_path} not found. Please check the file name and location.")
+        print(f"   Error: {file_path} not found.")
         return None
 
 def geocode_locations(presentations):
-    """Geocodes the 'venue' for each presentation using ArcGIS."""
     print("\n-> Geocoding locations (this may take a moment)...")
     geocoder = ArcGIS()
     geocoded_locations = {}
@@ -72,17 +73,32 @@ def geocode_locations(presentations):
     for p in presentations:
         venue = p['venue']
         description = f"{p['event']}<br>{p['venue']}<br>{p['date']}"
-        # Escape quotes to prevent breaking the JavaScript string
         description = description.replace('"', '&quot;')
 
         print(f"   Geocoding: {venue}")
+        
+        # 1. Smart Disambiguation: Find the country using ROR
+        search_query = venue
+        country = get_country_for_uni(venue)
+        if country:
+            search_query = f"{venue}, {country}"
+            print(f"     -> Smart match: Identified as '{search_query}'")
+
+        # 2. Ask ArcGIS for coordinates using the enriched search query
         try:
-            location_data = geocoder.geocode(venue, timeout=GEOCODE_TIMEOUT)
+            location_data = geocoder.geocode(search_query, timeout=GEOCODE_TIMEOUT)
 
             if location_data:
                 geocoded_locations[description] = (location_data.latitude, location_data.longitude)
                 print(f"     -> Success: Found at ({location_data.latitude:.4f}, {location_data.longitude:.4f})")
             else:
+                # Fallback: Try the original name without the country if the first try fails
+                if search_query != venue:
+                    location_data = geocoder.geocode(venue, timeout=GEOCODE_TIMEOUT)
+                    if location_data:
+                        geocoded_locations[description] = (location_data.latitude, location_data.longitude)
+                        print(f"     -> Success (Fallback): Found at ({location_data.latitude:.4f}, {location_data.longitude:.4f})")
+                        continue
                 print(f"     -> Failed: Could not find coordinates for '{venue}'.")
 
         except GeocoderTimedOut:
@@ -94,7 +110,6 @@ def geocode_locations(presentations):
     return geocoded_locations
 
 def create_js_file(locations):
-    """Creates the org-locations.js file from the geocoded dictionary."""
     print("\n-> Generating JavaScript map data file...")
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
     
@@ -103,7 +118,7 @@ def create_js_file(locations):
         js_content += f'  ["{description}", {lat}, {lon}],\n'
     
     if js_content.endswith(',\n'):
-        js_content = js_content[:-2] + '\n' # Remove the last comma
+        js_content = js_content[:-2] + '\n' 
     js_content += "];"
 
     with open(JS_OUTPUT_FILE, 'w', encoding='utf-8') as f:
@@ -111,7 +126,6 @@ def create_js_file(locations):
     print(f"   Success: Map data written to {JS_OUTPUT_FILE}")
 
 def main():
-    """Main function to run the script."""
     presentations = parse_presentations(INPUT_FILE)
     if not presentations:
         return
@@ -122,7 +136,6 @@ def main():
         return
 
     create_js_file(geocoded)
-
     print("\n---")
     print("✅ All done!")
 
