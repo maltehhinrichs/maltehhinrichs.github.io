@@ -2,10 +2,11 @@
 import os
 import re
 import json
+import time
 import urllib.request
 import urllib.parse
 import frontmatter
-from geopy.geocoders import ArcGIS
+from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
 
 # --- Configuration ---
@@ -22,14 +23,16 @@ def get_country_for_uni(venue):
     try:
         query = urllib.parse.quote(venue)
         url = f"https://api.ror.org/organizations?query={query}"
-        req = urllib.request.Request(url, headers={'User-Agent': 'Academic Map Generator/1.0'})
+        # Added a more robust User-Agent, which some APIs require to prevent blocking
+        req = urllib.request.Request(url, headers={'User-Agent': 'AcademicMapGenerator/1.0'})
         
         with urllib.request.urlopen(req, timeout=5) as response:
             data = json.loads(response.read().decode())
             if data.get('items') and len(data['items']) > 0:
                 # Get the country of the top search result
                 return data['items'][0]['country']['country_name']
-    except Exception:
+    except Exception as e:
+        print(f"     -> [Debug] ROR API lookup failed: {e}")
         pass
     return None
 
@@ -67,7 +70,8 @@ def parse_presentations(file_path):
 
 def geocode_locations(presentations):
     print("\n-> Geocoding locations (this may take a moment)...")
-    geocoder = ArcGIS()
+    # Switched back to OpenStreetMap (Nominatim)
+    geocoder = Nominatim(user_agent="academic_cv_map_generator")
     geocoded_locations = {}
 
     for p in presentations:
@@ -84,8 +88,10 @@ def geocode_locations(presentations):
             search_query = f"{venue}, {country}"
             print(f"     -> Smart match: Identified as '{search_query}'")
 
-        # 2. Ask ArcGIS for coordinates using the enriched search query
+        # 2. Ask Nominatim for coordinates using the enriched search query
         try:
+            # CRITICAL: Nominatim requires a 1 second delay between requests
+            time.sleep(1) 
             location_data = geocoder.geocode(search_query, timeout=GEOCODE_TIMEOUT)
 
             if location_data:
@@ -94,6 +100,7 @@ def geocode_locations(presentations):
             else:
                 # Fallback: Try the original name without the country if the first try fails
                 if search_query != venue:
+                    time.sleep(1) # Add delay for the fallback request too
                     location_data = geocoder.geocode(venue, timeout=GEOCODE_TIMEOUT)
                     if location_data:
                         geocoded_locations[description] = (location_data.latitude, location_data.longitude)
