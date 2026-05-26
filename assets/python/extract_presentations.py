@@ -8,19 +8,22 @@ def extract_presentations(md_path):
     in_section = False
     presentations = {}
     current_category = "Presentations"
+    
+    # Target exact Markdown headings that contain presentations and workshops
+    target_sections = ["# Academic Presentations", "# Workshops"]
 
-    # Regex to capture the Presentation, University, and Date 
     pat_entry = re.compile(r"^\*\*(.+?)\*\*,\s*(.+?)\s*\\hfill\s*(.+)")
 
     for line in lines:
-        if line.strip() == "# Academic Presentations":
-            in_section = True
+        if line.startswith("#") and not line.startswith("##"):
+            if line.strip() in target_sections:
+                in_section = True
+                current_category = line.replace("#", "").strip()
+            else:
+                in_section = False 
             continue
-        if in_section and line.startswith("#") and not line.startswith("##"):
-            break  # End of section
 
         if in_section:
-            # Dynamically capture subcategories (e.g., "## Invited Talks")
             if line.startswith("## "):
                 current_category = line.replace("##", "").strip()
                 if current_category not in presentations:
@@ -46,15 +49,15 @@ def extract_presentations(md_path):
 
 def format_presentations_md(presentations):
     out = []
-    # Loop through the parsed categories and create subheadings
     for category, pres_list in presentations.items():
         if not pres_list:
             continue
         out.append(f"### {category}\n")
         for p in pres_list:
+            # Added <br> tags to strictly enforce line breaks in Jekyll markdown
             out.append(
-                f"- **{p['conference']}** \n"
-                f"  {p['university']}  \n"
+                f"- **{p['conference']}**<br>\n"
+                f"  {p['university']}<br>\n"
                 f"  {p['date']}\n"
             )
     return "\n".join(out)
