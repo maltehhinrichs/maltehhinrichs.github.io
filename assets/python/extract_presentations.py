@@ -10,7 +10,7 @@ def extract_presentations(md_path):
     current_category = "Presentations"
     
     # Target exact Markdown headings that contain presentations and workshops
-    target_sections = ["# Academic Presentations", "# Workshops"]
+    target_sections = ["# Academic Presentations", "# Workshops", "# Professional Development"]
 
     pat_entry = re.compile(r"^\*\*(.+?)\*\*,\s*(.+?)\s*\\hfill\s*(.+)")
 
