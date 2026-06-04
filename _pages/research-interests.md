@@ -25,7 +25,7 @@ My research focuses on the intersection of economic history, technological chang
 ## Publications
 
 - **"Water mills and human capital accumulation in industrialising Prussia"**  
-  *Explorations in Economic History*, 101, p. 101767.  
+  *Explorations in Economic History*, vol. 101 (2026), article no. 101767.  
   [Article](https://doi.org/10.1016/j.eeh.2026.101767) | [Replication Files](https://doi.org/10.17632/pvnh7g4b39.2)
   <details>
   <summary>Abstract</summary>
