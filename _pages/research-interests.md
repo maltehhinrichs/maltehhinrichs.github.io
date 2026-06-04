@@ -16,7 +16,7 @@ My research focuses on the intersection of economic history, technological chang
 
 ## Dissertation
 
-**Title:** *Renewable Energy in the Industrial Revolution*  
+**Title:** *Water, Wheels, and the Wealth of Nations: Geography and Path Dependence in European Industrialization*  
 **Supervisors:** Alan Fernihough and Christopher Colvin  
 **Institution:** Queen's University Belfast  
 **Expected completion:** 2026
