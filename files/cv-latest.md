@@ -80,7 +80,7 @@ Research Student, Centre for Economic History, Queen’s University Belfast \hfi
 # Publications
 
 "Water mills and human capital accumulation in industrialising Prussia" \hfill 07/2026  
-*Explorations in Economic History*  
+*Explorations in Economic History*, vol. 101 (2026), article no. 101767.  
 Article: [doi:10.1016/j.eeh.2026.101767](https://doi.org/10.1016/j.eeh.2026.101767)  
 Replication package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g4b39.2)
 
@@ -111,7 +111,7 @@ Principles of Economics, Teaching Assistant (tutorials and exam organisation) \h
 
 **Winner, Three Minute Thesis (3MT®) Competition**, Queen's University Belfast \hfill 04/2026
 
-**New Researchers’ Prize**, Economic History Society \hfill 04/2026
+**New Researcher Prize**, Economic History Society \hfill 04/2026
 
 **Graduated in top 20% of MSc Economics cohort**, University of Mannheim \hfill 09/2022
 
@@ -122,6 +122,10 @@ Principles of Economics, Teaching Assistant (tutorials and exam organisation) \h
 ---
 
 # Research Grants and Funding
+
+**Santander Career Support Award** \hfill 05/2026
+
+**Economic History Society New Researcher Conference Bursary** \hfill 01/2026
 
 **EHES Conference Travel and Accommodation Grant** \hfill 07/2025
 
