@@ -6,7 +6,7 @@ var addressPoints = [
   ["CEPH PhD Workshop<br>Queen's University Belfast<br>05/2026", 54.5842881, -5.9336562],
   ["Queen's Postgraduate Research Conference<br>Queen's University Belfast<br>05/2026", 54.5842881, -5.9336562],
   ["Economic History Society Conference<br>London School of Economics<br>04/2026", 51.5146063, -0.1164509],
-  ["Irish Postgraduate and Early Career Economics Workshop<br>Maynooth University<br>01/2026", 53.3821766, -6.5987338],
+  ["Irish Postgraduate and Early Career Economics Workshop<br>Maynooth University<br>01/2026", 53.3820615, -6.5988074],
   ["European Historical Economics Society Conference<br>University of Hohenheim<br>09/2025", 48.7133801, 9.212073],
   ["CEPH Workshop in Quantitative Economic History<br>Queen's University Belfast<br>06/2025", 54.5842881, -5.9336562],
   ["Queen's Postgraduate Research Conference<br>Queen's University Belfast<br>06/2025", 54.5842881, -5.9336562],
