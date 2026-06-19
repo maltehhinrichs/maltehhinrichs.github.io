@@ -19,6 +19,9 @@ main:
 
   - title: "Teaching"
     url: /teaching/
+
+  - title: "Public Engagement"
+    url: /public-engagement/
     
   - title: "CV"
     url: /cv/
