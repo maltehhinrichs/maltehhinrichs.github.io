@@ -12,9 +12,9 @@ My core teaching philosophy is that economic history provides students with some
 ## Teaching Experience
 
 **Queen's University Belfast**
-- Principles of Economics, Teaching Assistant (course design, tutorials) | *09/2025–01/2026*
-- Principles of Economics, Teaching Assistant (tutorials, exam supervision, marking) | *09/2024–01/2025*
+- Principles of Economics, Teaching Assistant (course design, tutorials) <span style="float: right;">*09/2025–01/2026*</span>
+- Principles of Economics, Teaching Assistant (tutorials, exam supervision, marking) <span style="float: right;">*09/2024–01/2025*</span>
 
 **University of Mannheim**
-- Macroeconomics A, Teaching Assistant (tutorials, student mentoring) | *02/2020–08/2020*
-- Principles of Economics, Teaching Assistant (tutorials, exam organisation) | *09/2018–12/2018*
+- Macroeconomics A, Teaching Assistant (tutorials, student mentoring) <span style="float: right;">*02/2020–08/2020*</span>
+- Principles of Economics, Teaching Assistant (tutorials, exam organisation) <span style="float: right;">*09/2018–12/2018*</span>
