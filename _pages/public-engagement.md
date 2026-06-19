@@ -13,5 +13,5 @@ author_profile: true
 Alongside Judy Stevenson (University College London) and Michael Aldous (Queen's University Belfast)
 
 <div style="max-width: 560px;">
-  <iframe class="fitvidsignore" data-fitvidsignore="true" width="100%" height="315" src="https://www.youtube.com/embed/E5pf2I-0zm8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/E5pf2I-0zm8" style="width: 100% !important; max-width: 560px !important; height: 315px !important;" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 </div>
