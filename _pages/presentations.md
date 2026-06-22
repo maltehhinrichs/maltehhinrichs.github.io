@@ -13,7 +13,7 @@ author_profile: true
 
 ### Invited Talks
 
-- **Oxford Graduate Seminar**<br>
+- **Graduate Seminar in Economic and Social History**<br>
   University of Oxford<br>
   05/2026
 
