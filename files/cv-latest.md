@@ -50,7 +50,9 @@ keep-tex: true
 
 **PhD in Economics** \hfill 10/2023--present  
 Queen's University Belfast, UK  
-Dissertation title: *Renewable Energy in the Industrial Revolution*  
+Dissertation title: *Water, Wheels, and the Wealth of Nations: Geography and*  
+*Path Dependence in European Industrialization*  
+Submission Date: 27/08/2026
 
 **MSc Economics** \hfill 09/2020--09/2022  
 University of Mannheim, Germany  
@@ -99,11 +101,12 @@ Replication package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g
 # Teaching Experience
 
 **Queen's University Belfast**  
-Principles of Economics, Teaching Assistant (course design, tutorials, marking) \hfill 09/2024--present
+Principles of Economics, Teaching Assistant (course design, tutorials) \hfill 09/2025--01/2026  
+Principles of Economics, Teaching Assistant (tutorials, exam supervision, marking) \hfill 09/2024--01/2025
 
 **University of Mannheim**  
-Macroeconomics A, Teaching Assistant (tutorials and forum moderation) \hfill 02/2020--08/2020  
-Principles of Economics, Teaching Assistant (tutorials and exam organisation) \hfill 09/2018--12/2018
+Macroeconomics A, Teaching Assistant (tutorials, student mentoring) \hfill 02/2020--08/2020  
+Principles of Economics, Teaching Assistant (tutorials, exam organisation) \hfill 09/2018--12/2018
 
 ---
 
@@ -151,7 +154,7 @@ Irish Economic Association
 
 ## Invited Talks
 
-**Oxford Graduate Seminar**, University of Oxford \hfill 05/2026
+**Graduate Seminar in Economic and Social History**, University of Oxford \hfill 05/2026
 
 **Economic History Seminar**, University of Hohenheim \hfill 03/2026
 
@@ -216,6 +219,8 @@ Junior Consultant, Global Transfer Pricing (Mannheim, Germany) \hfill 04/2023--0
 **Languages:** German (native), English (fluent), Spanish (intermediate), Latin (reading)
 
 ---
+
+{{< pagebreak >}}
 
 # References
 
