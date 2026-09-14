@@ -7,7 +7,6 @@ format: pdf
 colorlinks: true
 linkcolor: black
 urlcolor: teal
-pdf-engine: pdflatex
 toc: false
 number-sections: false
 fontsize: 11pt
@@ -200,9 +199,12 @@ Irish Economic Association
 
 # Public Engagement
 
-'Chatting GPT: What does history tell us about the future of AI?'  
+*['Die Kraft des Wassers: Deutschlands vergessene Industrialisierung'](https://www.geo.de/wissen/weltgeschichte/die-kraft-des-wassers--deutschlands-vergessene-industrialisierung-37979090.html)*  
+Featured Interview, GEO Magazine (Germany) \hfill 08/2026
+
+*['Chatting GPT: What does history tell us about the future of AI?'](https://ceph.ie/events/chatting-gpt-what-does-history-tell-us-about-the-future-of-ai-30-10-2025/)*  
 Invited Speaker, ESRC Festival of Social Science \hfill 10/2025
-    
+
 ---
 
 # Industry Experience
