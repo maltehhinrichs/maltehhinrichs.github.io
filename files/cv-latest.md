@@ -81,7 +81,7 @@ Research Student, Centre for Economic History, Queen’s University Belfast \hfi
 # Publications
 
 "Water mills and human capital accumulation in industrialising Prussia" \hfill 07/2026  
-*Explorations in Economic History*, vol. 101 (2026), article no. 101767.  
+*Explorations in Economic History*, 101(1): 101767.  
 Article: [doi:10.1016/j.eeh.2026.101767](https://doi.org/10.1016/j.eeh.2026.101767)  
 Replication package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g4b39.2)
 
@@ -92,7 +92,7 @@ Replication package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g
 "Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
 *Work in progress*
 
-"Mapping the Malthusian bound: a first-nature index of European city growth"  
+"Market access without roads: First-nature geography and European city growth, 700–1800"  
 *Work in progress*
 
 ---
