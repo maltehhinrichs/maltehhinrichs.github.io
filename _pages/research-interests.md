@@ -38,8 +38,7 @@ You can also find my articles on <a href="{{site.author.googlescholar}}">my Goog
 ## Job Market Paper & Working Papers
 
 - **"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"**  
-  *Work in progress*  
-  [Download Job Market Paper](/files/Scotland_full.pdf)  
+  *Job Market Paper* ([Download](/files/Scotland_full.pdf))  
   **Award:** [New Researcher Prize](https://ehs.org.uk/society/grants-prizes/new-researcher-paper-prize-winners/), Economic History Society (2026)
   <details>
   <summary>Abstract</summary>
