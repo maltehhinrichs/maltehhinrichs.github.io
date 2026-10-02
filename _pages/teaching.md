@@ -17,5 +17,5 @@ My core teaching philosophy is that economic history provides students with some
 
 **University of Mannheim**
 - Macroeconomics A, Teaching Assistant (tutorials, student mentoring) <span style="float: right;">*02/2020–08/2020*</span>
-- Statistics II, Teaching Assistant (tutorials, student mentoring) <span style="float: right;">*09/2019--12/2019*</span>
+- Statistics II, Teaching Assistant (tutorials, student mentoring) <span style="float: right;">*09/2019–12/2019*</span>
 - Principles of Economics, Teaching Assistant (tutorials, exam organisation) <span style="float: right;">*09/2018–12/2018*</span>
