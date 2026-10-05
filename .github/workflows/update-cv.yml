@@ -1,4 +1,4 @@
-name: Update CV from Mega
+name: Update CV and JMP from Mega
 
 on:
   schedule:
@@ -7,6 +7,7 @@ on:
 
 jobs:
   update-cv:
+    name: Update CV and JMP from Mega
     runs-on: ubuntu-latest
 
     # Necessary permission!
@@ -32,20 +33,37 @@ jobs:
 
       - name: Download CV files from MEGA
         run: |
-          # This reliably downloads the folder into a new subdirectory
-          mega-get "${{ secrets.MEGA_FOLDER }}" .
+          set -e
+          mkdir -p /tmp/cv-download
+          mega-get "${{ secrets.MEGA_FOLDER }}" /tmp/cv-download
+          find /tmp/cv-download -name "Academic_CV.qmd" -exec cp {} files/cv-latest.md \;
+          find /tmp/cv-download -name "Academic_CV.pdf" -exec cp {} files/cv-latest.pdf \;
 
-      - name: Commit and push updated CV
+      - name: Download JMP file from MEGA
         run: |
+          set -e
+          mkdir -p /tmp/jmp-download
+          mega-get "${{ secrets.MEGA_JMP }}" /tmp/jmp-download
+
+          JMP_FILE=$(find /tmp/jmp-download -type f -iname "*.pdf" | head -n 1)
+          if [ -z "$JMP_FILE" ]; then
+            echo "No JMP PDF was downloaded from MEGA_JMP."
+            exit 1
+          fi
+
+          cp "$JMP_FILE" files/Scotland_full.pdf
+
+      - name: Commit and push updated CV and JMP
+        run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Find the downloaded files and move/rename them INTO the 'files' directory.
-          find . -name "Academic_CV.qmd" -exec mv {} files/cv-latest.md \;
-          find . -name "Academic_CV.pdf" -exec mv {} files/cv-latest.pdf \;
-          
-          # Add the files from their new location.
-          git add files/cv-latest.md files/cv-latest.pdf
-          
-          git commit -m "Updated CV from Mega" || echo "No changes to commit"
-          git push
+
+          git add files/cv-latest.md files/cv-latest.pdf files/Scotland_full.pdf
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update CV and JMP from Mega"
+            git push
+          fi
