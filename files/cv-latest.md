@@ -11,22 +11,23 @@ toc: false
 number-sections: false
 fontsize: 11pt
 geometry: 
-  - top=2cm
-  - bottom=2cm
+  - top=1.75cm
+  - bottom=1.75cm
   - left=1.75cm
   - right=1.75cm
 linestretch: 1.08
 header-includes:
   - \usepackage{titling}
+  - \usepackage{titlesec}
   - \usepackage{fancyhdr}
-  - \usepackage{microtype}
   - \usepackage{enumitem}
   - \usepackage{url}
-  - \usepackage{sectsty}
   - \pretitle{\begin{center}\vspace{-2em}\Huge\bfseries}
   - \posttitle{\par\normalsize\vspace{0.5em} Department of Economics, Queen's University Belfast \\ Riddel Hall, 185 Stranmillis Road, Belfast BT9 5EE, UK \\ \vspace{0.25em} \href{mailto:mhinrichs01@qub.ac.uk}{mhinrichs01@qub.ac.uk} $\cdot$ \href{https://maltehinrichs.de}{Website} $\cdot$ \href{https://orcid.org/0000-0003-1950-2644}{ORCID}\end{center}\rule{\textwidth}{1pt}\vspace{-4em}}
   - \setlength{\droptitle}{-3em}
-  - \subsectionfont{\large\mdseries}
+  - \titleformat{\subsection}{\large\mdseries}{}{0pt}{}
+  - \titlespacing{\section}{0pt}{6pt}{8pt}
+  - \titlespacing{\subsection}{0pt}{10pt}{6pt}
   - \pagestyle{fancy}
   - \fancyhf{}
   - \renewcommand{\headrulewidth}{0pt}
@@ -34,14 +35,14 @@ header-includes:
   - \setlist[itemize]{leftmargin=1em,itemsep=0pt,parsep=0pt,topsep=0.1em,partopsep=0pt}
   - \setlist[enumerate]{leftmargin=1em,itemsep=0pt,parsep=0pt,topsep=0.1em,partopsep=0pt}
   - \urlstyle{same}
-  - \setlength{\parskip}{0.3em}
-  - \setlength{\parindent}{0pt}
+  - \setlength{\parskip}{4pt plus 1pt}
   - \newlength{\cvhangindent}
   - \setlength{\cvhangindent}{1em}
   - \makeatletter
   - \let\@oldnewline\\
   - \def\\{\@oldnewline\hangindent=\cvhangindent\relax}
   - \makeatother
+  - \newenvironment{cvabstract}{\begingroup\setlength{\leftskip}{\cvhangindent}\small}{\par\endgroup}
 keep-tex: true
 ---
 
@@ -49,9 +50,10 @@ keep-tex: true
 
 **PhD in Economics** \hfill 10/2023--present  
 Queen's University Belfast, UK  
-Dissertation title: *Water, Wheels, and the Wealth of Nations: Geography and*  
+Affiliated with: Centre for Economics, Policy and History (CEPH)  
+Dissertation Title: *Water, Wheels, and the Wealth of Nations: Geography and*  
 *Path Dependence in European Industrialization*  
-Submission Date: 27/08/2026
+Submission: 27/08/2026 $\cdot$ Viva: 21/10/2026
 
 **MSc Economics** \hfill 09/2020--09/2022  
 University of Mannheim, Germany  
@@ -70,30 +72,30 @@ Hong Kong University of Science and Technology, Hong Kong
 
 ---
 
-# Academic Affiliations
-
-Research Student, Centre for Economics, Policy and History \hfill 10/2023--present
-
-Research Student, Centre for Economic History, Queen’s University Belfast \hfill 10/2023--present
-
----
-
 # Publications
 
 "Water mills and human capital accumulation in industrialising Prussia" \hfill 07/2026  
 *Explorations in Economic History*, 101(1): 101767.  
 Article: [doi:10.1016/j.eeh.2026.101767](https://doi.org/10.1016/j.eeh.2026.101767)  
-Replication package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g4b39.2)
+Replication Package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g4b39.2)
+
+---
+
+# Job Market Paper
+
+"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
+Latest draft available on my [website](https://maltehinrichs.de/files/Scotland_full.pdf).
+
+\begin{cvabstract}
+\noindent\textbf{Abstract:} Does technological change favour agile entrants or adaptable incumbents? I examine this using Scotland’s industrialisation, testing whether steam power allowed new locations to "leapfrog" centres of water power. Using a newly constructed dataset linking over 1,200 pre-industrial mills to parish-level outcomes, and an instrumental variable strategy based on geographic endowments, I reject the leapfrogging hypothesis. An additional mill in 1755 caused 8\% higher long-run population growth (driven by migration), with effects intensifying precisely when steam power became abundant. Micro-evidence reveals that hydraulically advantaged mill sites largely survived, transitioned to industrial production and avoided obsolescence by integrating steam power as a complementary technology. The findings demonstrate that proto-industrial water power provided the critical infrastructure and human capital for the steam age, challenging the view that coal endowments alone determined the industrial map.
+\end{cvabstract}
 
 ---
 
 # Working Papers
 
-"Leapfrogging or path dependence? Water mills and long-run growth in the Scottish Industrial Revolution"  
-*Work in progress*
-
 "Market access without roads: First-nature geography and European city growth, 700–1800"  
-*Work in progress*
+Draft available upon request.
 
 ---
 
@@ -105,6 +107,7 @@ Principles of Economics, Teaching Assistant (tutorials, exam supervision, markin
 
 **University of Mannheim**  
 Macroeconomics A, Teaching Assistant (tutorials, student mentoring) \hfill 02/2020--08/2020  
+Statistics II, Teaching Assistant (tutorials, student mentoring) \hfill 09/2019--12/2019   
 Principles of Economics, Teaching Assistant (tutorials, exam organisation) \hfill 09/2018--12/2018
 
 ---
@@ -139,7 +142,7 @@ Principles of Economics, Teaching Assistant (tutorials, exam organisation) \hfil
 
 ---
 
-# Professional Membership
+# Professional Memberships
 
 Economic History Society (UK)
 
@@ -216,7 +219,10 @@ Junior Consultant, Global Transfer Pricing (Mannheim, Germany) \hfill 04/2023--0
 
 # Technical Skills
 
-**Software:** R, Stata, Matlab, Quarto, LaTeX, QGIS
+**Econometric & Spatial Methods:** Causal Inference (IV/2SLS, DiD, Panel/FE), Spatial Econometrics,  
+GIS & Cost-Surface Analysis, Gravity Modelling
+
+**Software & Programming:** R (`sf`, `terra`), Python, Stata, Matlab, QGIS, Git, Quarto, LaTeX
 
 **Languages:** German (native), English (fluent), Spanish (intermediate), Latin (reading)
 
@@ -229,7 +235,7 @@ Junior Consultant, Global Transfer Pricing (Mannheim, Germany) \hfill 04/2023--0
 ::: {layout-ncol=2}
 **Chris Colvin** (PhD Supervisor)  
 Queen's University Belfast  
-\href{mailto:chris.colvin@qub.ac.uk}{chris.colvin@qub.ac.uk} $\cdot$ \href{https://chriscolvin.org}{Website}
+\href{mailto:chris.colvin@qub.ac.uk}{chris.colvin@qub.ac.uk} $\cdot$ \href{https://chris-colvin.github.io/}{Website}
 
 **Alexander Donges** (MSc & BSc Advisor)  
 University of Mannheim  
