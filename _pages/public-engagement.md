@@ -15,3 +15,8 @@ Alongside Judy Stevenson (University College London) and Michael Aldous (Queen's
 <div style="max-width: 560px;">
   <iframe src="https://www.youtube.com/embed/E5pf2I-0zm8" style="width: 100% !important; max-width: 560px !important; height: 315px !important;" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 </div>
+
+## Press Interviews
+
+**['Die Kraft des Wassers: Deutschlands vergessene Industrialisierung'](https://www.geo.de/wissen/weltgeschichte/die-kraft-des-wassers--deutschlands-vergessene-industrialisierung-37979090.html)**  
+*Featured Interview, GEO Magazine (Germany) (August 2026)*
