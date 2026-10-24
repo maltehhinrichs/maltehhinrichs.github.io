@@ -7,13 +7,13 @@ author_profile: true
 
 ## Research Interests
 
-My research focuses on economic history, technological change, and long-run development. I am particularly interested in:
+My research lies at the intersection of economic history, technological change, and long-run development. I am particularly interested in:
 
-- Economic history and long-run development, with a focus on how first-nature geography shapes economic potential and market access
-- Energy transitions and technological change, especially the shift from water power to steam during industrialisation
-- Path dependence in industrial location, including how incumbent water-powered sites adapted to new technologies
-- Practical human capital and technical knowledge formation through local production capabilities
-- Comparative and spatial patterns of development across European industrialisation
+- Historical drivers of long-run development, including how first-nature geography shapes economic potential and market access
+- Energy systems and technological change, especially transitions from water power to steam and related industrial transformations
+- Path dependence and adaptation in economic landscapes, including how incumbent locations respond to new technologies
+- Practical human capital, technical knowledge, and the formation of local productive capabilities
+- Comparative and spatial patterns of development during European industrialisation and beyond
 
 ## Dissertation
 
