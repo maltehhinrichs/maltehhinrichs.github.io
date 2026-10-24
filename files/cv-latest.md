@@ -53,7 +53,7 @@ Queen's University Belfast, UK
 Affiliated with: Centre for Economics, Policy and History (CEPH)  
 Dissertation Title: *Water, Wheels, and the Wealth of Nations: Geography and*  
 *Path Dependence in European Industrialization*  
-Submission: 27/08/2026 $\cdot$ Viva: 21/10/2026 (passed with no corrections)
+Viva: 21/10/2026 (passed with no corrections)
 
 **MSc Economics** \hfill 09/2020--09/2022  
 University of Mannheim, Germany  
