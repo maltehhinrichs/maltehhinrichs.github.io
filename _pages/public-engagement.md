@@ -7,6 +7,9 @@ author_profile: true
 
 ## Talks
 
+**['Die Kraft des Wassers: Deutschlands vergessene Industrialisierung'](https://www.geo.de/wissen/weltgeschichte/die-kraft-des-wassers--deutschlands-vergessene-industrialisierung-37979090.html)**  
+*Featured Interview, GEO Magazine (Germany) (August 2026)*
+
 **'Chatting GPT: What does history tell us about the future of AI?'**  
 *Invited Speaker, ESRC Festival of Social Science (October 30th, 2025)*
 

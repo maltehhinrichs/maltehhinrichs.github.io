@@ -7,19 +7,21 @@ author_profile: true
 
 ## Research Interests
 
-My research focuses on the intersection of economic history, technological change, and long-run economic development. I am particularly interested in:
+My research focuses on economic history, technological change, and long-run development. I am particularly interested in:
 
-- The role of renewable energy sources (especially water power) in historical economic development
-- Technology adoption and path dependence during industrialization
-- The relationship between energy infrastructure and human capital formation
-- Comparative economic development during the Industrial Revolution
+- Economic history and long-run development, with a focus on how first-nature geography shapes economic potential and market access
+- Energy transitions and technological change, especially the shift from water power to steam during industrialisation
+- Path dependence in industrial location, including how incumbent water-powered sites adapted to new technologies
+- Practical human capital and technical knowledge formation through local production capabilities
+- Comparative and spatial patterns of development across European industrialisation
 
 ## Dissertation
 
 **Title:** *Water, Wheels, and the Wealth of Nations: Geography and Path Dependence in European Industrialization*  
 **Supervisors:** Alan Fernihough and Christopher Colvin  
 **Institution:** Queen's University Belfast  
-**Expected completion:** 2026
+**Submission:** 27 August 2026  
+**Viva:** 21 October 2026 (passed with no corrections)
 
 
 ## Publications
