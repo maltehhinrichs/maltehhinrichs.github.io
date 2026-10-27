@@ -25,7 +25,7 @@ header-includes:
   - \pretitle{\begin{center}\vspace{-2em}\Huge\bfseries}
   - \posttitle{\par\normalsize\vspace{0.5em} Department of Economics, Queen's University Belfast \\ Riddel Hall, 185 Stranmillis Road, Belfast BT9 5EE, UK \\ \vspace{0.25em} \href{mailto:mhinrichs01@qub.ac.uk}{mhinrichs01@qub.ac.uk} $\cdot$ \href{https://maltehinrichs.de}{Website} $\cdot$ \href{https://orcid.org/0000-0003-1950-2644}{ORCID}\end{center}\rule{\textwidth}{1pt}\vspace{-4em}}
   - \setlength{\droptitle}{-3em}
-  - \titleformat{\subsection}{\large\mdseries}{}{0pt}{}
+  - \titleformat{\subsection}{\large\mdseries\itshape}{}{0pt}{}
   - \titlespacing{\section}{0pt}{6pt}{8pt}
   - \titlespacing{\subsection}{0pt}{10pt}{6pt}
   - \pagestyle{fancy}
@@ -53,7 +53,7 @@ Queen's University Belfast, UK
 Affiliated with: Centre for Economics, Policy and History (CEPH)  
 Dissertation Title: *Water, Wheels, and the Wealth of Nations: Geography and*  
 *Path Dependence in European Industrialization*  
-Viva: 21/10/2026 (passed with no corrections)
+Viva: 21/10/2026 (Passed with no corrections; highest possible outcome)
 
 **MSc Economics** \hfill 09/2020--09/2022  
 University of Mannheim, Germany  
