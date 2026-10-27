@@ -9,9 +9,8 @@ author_profile: true
 
 My research lies at the intersection of economic history, technological change, and long-run development. I am particularly interested in:
 
-- Historical drivers of long-run development, including how first-nature geography shapes economic potential and market access
-- Energy systems and technological change, especially transitions from water power to steam and related industrial transformations
-- Path dependence and adaptation in economic landscapes, including how incumbent locations respond to new technologies
+- Energy systems and technological change, especially the transition from water power to steam
+- Path dependence and adaptation in economic landscapes
 - Practical human capital, technical knowledge, and the formation of local productive capabilities
 - Comparative and spatial patterns of development during European industrialisation and beyond
 
