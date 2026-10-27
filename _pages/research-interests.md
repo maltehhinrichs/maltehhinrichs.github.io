@@ -19,7 +19,7 @@ My research lies at the intersection of economic history, technological change, 
 **Title:** *Water, Wheels, and the Wealth of Nations: Geography and Path Dependence in European Industrialization*  
 **Supervisors:** Alan Fernihough and Christopher Colvin  
 **Institution:** Queen's University Belfast  
-**PhD viva:** 21 October 2026 (passed with no corrections)
+**PhD viva:** 21 October 2026 (passed with no corrections; highest possible outcome)
 
 
 ## Publications
