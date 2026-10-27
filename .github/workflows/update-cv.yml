@@ -45,13 +45,21 @@ jobs:
           mkdir -p /tmp/jmp-download
           mega-get "${{ secrets.MEGA_JMP }}" /tmp/jmp-download
 
-          JMP_FILE=$(find /tmp/jmp-download -type f -iname "*.pdf" | head -n 1)
-          if [ -z "$JMP_FILE" ]; then
-            echo "No JMP PDF was downloaded from MEGA_JMP."
+          mapfile -t JMP_MATCHES < <(find /tmp/jmp-download -type f -name "Scotland_full.pdf")
+          if [ "${#JMP_MATCHES[@]}" -eq 0 ]; then
+            echo "No file named Scotland_full.pdf was found in the downloaded MEGA_JMP folder."
+            echo "Downloaded files:"
+            find /tmp/jmp-download -type f -print
             exit 1
           fi
 
-          cp "$JMP_FILE" files/Scotland_full.pdf
+          if [ "${#JMP_MATCHES[@]}" -gt 1 ]; then
+            echo "Multiple files named Scotland_full.pdf were found in MEGA_JMP download:"
+            printf '%s\n' "${JMP_MATCHES[@]}"
+            exit 1
+          fi
+
+          cp "${JMP_MATCHES[0]}" files/Scotland_full.pdf
 
       - name: Commit and push updated CV and JMP
         run: |
