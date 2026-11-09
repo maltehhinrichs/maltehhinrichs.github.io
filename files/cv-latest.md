@@ -87,7 +87,7 @@ Replication Package: [doi:10.17632/pvnh7g4b39.2](https://doi.org/10.17632/pvnh7g
 Latest draft available on my [website](https://maltehinrichs.de/files/Scotland_full.pdf).
 
 \begin{cvabstract}
-\noindent\textbf{Abstract:} Does technological change favour agile entrants or adaptable incumbents? I examine this using Scotland’s industrialisation, testing whether steam power allowed new locations to "leapfrog" centres of water power. Using a newly constructed dataset linking over 1,200 pre-industrial mills to parish-level outcomes, and an instrumental variable strategy based on geographic endowments, I reject the leapfrogging hypothesis. An additional mill in 1755 caused 8\% higher long-run population growth (driven by migration), with effects intensifying precisely when steam power became abundant. Micro-evidence reveals that hydraulically advantaged mill sites largely survived, transitioned to industrial production and avoided obsolescence by integrating steam power as a complementary technology. The findings demonstrate that proto-industrial water power provided the critical infrastructure and human capital for the steam age, challenging the view that coal endowments alone determined the industrial map.
+\noindent\textbf{Abstract:} Does technological change favour agile entrants or adaptable incumbents? I study Scotland’s industrialisation to test whether steam power allowed new locations to leapfrog centres of water power. Using a newly constructed dataset linking over 1,200 pre-industrial mills to parish-level outcomes, and an instrumental variable strategy based on geographic endowments, I reject the leapfrogging hypothesis. Each additional mill in 1755 increased long-run population growth by about 8%, primarily through migration; the effect strengthened as steam power spread. Micro-evidence shows that hydraulically advantaged mill sites largely survived, transitioned to industrial production and avoided obsolescence by integrating steam power as a complementary technology. The findings suggest that pre-industrial water power left infrastructure and skills that sustained local industrial activity into the steam age, challenging the view that coal endowments alone determined industrial geography.
 \end{cvabstract}
 
 ---
@@ -237,9 +237,9 @@ GIS & Cost-Surface Analysis, Gravity Modelling
 Queen's University Belfast  
 \href{mailto:chris.colvin@qub.ac.uk}{chris.colvin@qub.ac.uk} $\cdot$ \href{https://chris-colvin.github.io/}{Website}
 
-**Alexander Donges** (MSc & BSc Advisor)  
-University of Mannheim  
-\href{mailto:donges@uni-mannheim.de}{donges@uni-mannheim.de} $\cdot$ \href{https://sites.google.com/view/alexanderdonges/}{Website}
+**Carsten Burhop** (External PhD Examiner)  
+Rheinische Friedrich-Wilhelms-Universität Bonn  
+\href{mailto:burhop@uni-bonn.de}{burhop@uni-bonn.de} $\cdot$ \href{https://www.igw.uni-bonn.de/de/institut/abteilung-vswg/burhop-1}{Website}
 :::
 
 ::: {layout-ncol=2}
